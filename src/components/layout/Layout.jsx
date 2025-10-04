@@ -1,3 +1,4 @@
+import ExitViWrapper from "../shared/ExitViWrapper";
 import Header from "./Header";
 import Navbar from "./Navbar";
 
@@ -6,7 +7,6 @@ export default function Layout({ children }) {
     return (
         <>
             <Navbar />
-            <Header />
             {children}
         </>
     )
