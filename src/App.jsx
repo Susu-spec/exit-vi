@@ -2,8 +2,10 @@ import Lenis from "lenis"
 import Header from "./components/layout/Header"
 import Layout from "./components/layout/Layout"
 import ExitViWrapper from "./components/shared/ExitViWrapper"
-import Hero from "./components/shared/Hero"
+import Hero from "./sections/hero/Hero"
 import { useEffect } from "react"
+import { CursorProvider } from "./context/CursorProvider"
+import CustomCursor from "./components/shared/CustomCursor"
 
 function App() {
 
@@ -23,11 +25,15 @@ function App() {
   }, []);
 
   return (
-    <Layout>
-      <ExitViWrapper />
-      <Header />
-      <Hero />
-    </Layout>
+    <CursorProvider>
+      <CustomCursor />
+      <Layout>
+        <ExitViWrapper />
+        <Header />
+        <Hero />
+      </Layout>
+    </CursorProvider>
+   
   )
 }
 

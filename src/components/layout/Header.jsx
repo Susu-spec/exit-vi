@@ -12,6 +12,7 @@ export default function Header() {
                         title="Vidzflow video player"
                         allowFullScreen
                         loading="lazy"
+                        style={{ pointerEvents: 'none' }}
                     />
                 </Box>
             </div>

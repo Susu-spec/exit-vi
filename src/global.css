@@ -160,7 +160,6 @@ body {
 }
 
 .hero-slider-container {
-  cursor: none;
   width: 100%;
   max-width: 100%;
   margin-left: auto;
@@ -188,9 +187,8 @@ body {
 
 .splide__slide.home {
   aspect-ratio: 3 / 3.5;
-  cursor: none;
   margin-right: 1vw;
-  width: calc(33.3333% - 0.666667vw);
+  /* width: calc(33.3333% - 0.666667vw); */
   padding-left: 0;
   padding-right: 0;
   position: relative;
@@ -205,11 +203,6 @@ body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
-}
-
-.splide__list {
-  display: flex;
-  width: auto;
 }
 
 .splide__track {
