@@ -1,7 +1,8 @@
 import { Box, Grid } from "@chakra-ui/react";
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css';;
-import HeroCard from "./HeroCard";
+import HeroCard from "../../sections/hero/HeroCard";
+import { useCursor } from "../../context/CursorProvider";
 
 const videoUrls = [
     "https://app.vidzflow.com/v/uKzdfVEd1O?dq=source&ap=true&muted=true&loop=true&ctp=false&bv=true&piv=false&playsinline=true&bc=%234E5FFD&controls=false",
@@ -14,9 +15,20 @@ const videoUrls = [
 
 
 export default function HeroSlider() {
+    const cursor = useCursor();
+    const { setDrag, setView, setDefault } = cursor;
+
     return (
-        <Grid className="hero-slider-container" paddingY="8vw" 
-            columnGap="8vw" rowGap="8vw" flexFlow="column">
+        <Grid 
+            paddingY="8vw" 
+            className="hero-slider-container"
+            columnGap="8vw" 
+            rowGap="8vw" 
+            flexFlow="column"
+            onMouseEnter={setDrag}
+            onMouseDown={setDrag}
+            onMouseLeave={setDefault}
+        >
                 <Box overflow="hidden" width="100%" position="relative" paddingLeft="1vw">
                     <Splide options={{
                         type: "slide",
@@ -27,13 +39,15 @@ export default function HeroSlider() {
                         arrows: false,
                         pagination: false,
                         drag: true,
+                        fixedWidth: "calc(33.3333% - 0.666667vw)"
                     }}
                     aria-label="Hero Video Slider"
-                    className="slider1"
+                    className=""
                     >
                         {videoUrls.map((url, index) => (
                             <SplideSlide className="home">
                                 <HeroCard
+                                    className="slider1"
                                     key={index}
                                     videoUrl={url}
                                 />

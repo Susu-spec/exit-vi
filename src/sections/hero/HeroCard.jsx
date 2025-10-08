@@ -30,7 +30,7 @@ export default function HeroCard({ videoUrl }) {
                     allowFullScreen
                     _loading="lazy"
                     src={videoUrl} 
-                    style={{ overflow: "hidden" }}
+                    // style={{ overflow: "hidden" }}
                 />
                 <Span className="overflow-overlay" />
             </Flex>
