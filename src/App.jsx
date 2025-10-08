@@ -6,6 +6,7 @@ import Hero from "./sections/hero/Hero"
 import { useEffect } from "react"
 import { CursorProvider } from "./context/CursorProvider"
 import CustomCursor from "./components/shared/CustomCursor"
+import Work from "./sections/work"
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <ExitViWrapper />
         <Header />
         <Hero />
+        <Work />
       </Layout>
     </CursorProvider>
    

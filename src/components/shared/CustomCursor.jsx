@@ -1,4 +1,3 @@
-import useMouse from "@react-hook/mouse-position";
 import { motion, useMotionValue, useSpring } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 import { useCursor } from "../../context/CursorProvider";
