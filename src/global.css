@@ -147,6 +147,14 @@ body {
   line-height: 130%
 }
 
+.studio-h4.expertise-h3 {
+  font-size: 4vw;
+  line-height: 100%;
+}
+
+.studio-h4.expertise-p {
+  font-size: 1vw;
+}
 .hero-link {
   color: #fff;
   text-align: center;
@@ -274,4 +282,45 @@ body {
 
 .logo-marquee {
   max-width: 26vw;
+}
+
+.expertise-container {
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vw;
+  cursor: auto;
+  border-radius: 8px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-decoration: none;
+  transition: padding .4s cubic-bezier(.23, 1, .32, 1);
+  display: flex;
+  overflow: hidden;
+}
+
+.expertise-container.blue {
+  transition: background-color .4s 
+      cubic-bezier(.23, 1, .32, 1), padding .4s 
+      cubic-bezier(.23, 1, .32, 1);
+}
+
+.expertise-image-container {
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vw;
+  border-radius: 8px;
+  flex-flow: column;
+  flex: 1;
+  align-items: flex-start;
+  width: 100%;
+  transition: padding .4s cubic-bezier(.23, 1, .32, 1);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.expertise-image-container:hover {
+  padding: 1.4vw
 }

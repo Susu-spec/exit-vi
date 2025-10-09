@@ -1,5 +1,5 @@
 import { Box, Grid, Flex } from "@chakra-ui/react";
-import HoverVideo from "./HoverVideo";
+import HoverVideo from "../../components/shared/HoverVideo";
 import { TbFlagExclamation } from "react-icons/tb";
 import { AnimatePresence, motion } from "framer-motion";
 import SplitText from "../../components/shared/SplitText";

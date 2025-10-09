@@ -7,6 +7,7 @@ import { useEffect } from "react"
 import { CursorProvider } from "./context/CursorProvider"
 import CustomCursor from "./components/shared/CustomCursor"
 import Work from "./sections/work"
+import Services from "./sections/services"
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <Header />
         <Hero />
         <Work />
+        <Services />
       </Layout>
     </CursorProvider>
    
