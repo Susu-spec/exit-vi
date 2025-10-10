@@ -1,6 +1,6 @@
 import { Box, Grid } from "@chakra-ui/react";
 import { Splide, SplideSlide } from '@splidejs/react-splide'
-import '@splidejs/react-splide/css';;
+import '@splidejs/react-splide/css';
 import HeroCard from "../../sections/hero/HeroCard";
 import { useCursor } from "../../context/CursorProvider";
 
@@ -29,7 +29,7 @@ export default function HeroSlider() {
             onMouseDown={setDrag}
             onMouseLeave={setDefault}
         >
-                <Box overflow="hidden" width="100%" position="relative" paddingLeft="1vw">
+                <Box overflow="hidden" width="100%" height="100%" position="relative" paddingLeft="1vw">
                     <Splide options={{
                         type: "slide",
                         perPage: 3,
@@ -39,15 +39,16 @@ export default function HeroSlider() {
                         arrows: false,
                         pagination: false,
                         drag: true,
+                        start: 0,
                         fixedWidth: "calc(33.3333% - 0.666667vw)"
                     }}
                     aria-label="Hero Video Slider"
                     className=""
                     >
                         {videoUrls.map((url, index) => (
-                            <SplideSlide className="home">
+                            <SplideSlide>
                                 <HeroCard
-                                    className="slider1"
+                                    // className="slider1"
                                     key={index}
                                     videoUrl={url}
                                 />

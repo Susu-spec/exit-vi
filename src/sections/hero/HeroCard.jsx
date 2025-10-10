@@ -9,7 +9,7 @@ export default function HeroCard({ videoUrl }) {
             width="100%"
             height="100%"
             pos="relative"
-            overflow="hidden"
+            // overflow="hidden"
         >
             <Flex
                 zIndex="2"
@@ -20,8 +20,8 @@ export default function HeroCard({ videoUrl }) {
                 height="100%"
                 width="100%"
                 pos="relative"
-                className="hero-video-container"
-                overflow="hidden"
+                // className="hero-video-container"
+                // overflow="hidden"
             >
                 <Span 
                     as="iframe"
