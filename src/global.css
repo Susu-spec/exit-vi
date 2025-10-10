@@ -271,6 +271,15 @@ body {
   color: #1d1d1d;
 }
 
+.text.description-info-awards {
+  font-size: .9vw;
+  line-height: 1.1vw;
+}
+
+.text.label-info-awards {
+  color: #1d1d1d4d;
+}
+
 .work-h4 {
   font-size: 1vw;
   line-height: 130%;
