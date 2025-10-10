@@ -137,6 +137,10 @@ body {
   display: inline;
 }
 
+.hero.brand-h3 {
+  font-size: 3.4vw;
+}
+
 .studio-h4 {
   color: #1d1d1d;
   text-align: left;
@@ -332,4 +336,77 @@ body {
 
 .expertise-image-container:hover {
   padding: 1.4vw
+}
+
+.brands-block-container {
+  object-fit: fill;
+  border-radius: 8px;
+  align-items: flex-start;
+  width: 100%;
+  height: 15vw;
+  overflow: hidden;
+}
+
+.single-brand-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 168px;
+  cursor: pointer;
+}
+
+.single-brand-logo {
+  z-index: 1;
+  width: 100%;
+  max-width: 65%;
+  position: relative;
+}
+
+.single-brand-hover {
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Different colors for different brands */
+.single-brand-hover._01 {
+  background: #007bff;
+}
+
+.single-brand-hover._02 {
+  background: #ff3008;
+}
+
+.single-brand-hover._03 {
+  background: #5286ed;
+}
+
+.single-brand-hover._04 {
+  background: #e61d2b;
+}
+
+.single-brand-hover._05 {
+  background: #1db954;
+}
+
+.single-brand-hover._06 {
+  background: #2259C2;
+}
+
+.single-brand-hover._07 {
+  background: #ec3f43;
+}
+
+.single-brand-hover._08 {
+  background: #000;
+}
+
+/* Hover state */
+.single-brand-container:hover .single-brand-hover {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1 !important;
 }
