@@ -352,8 +352,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 168px;
-  cursor: pointer;
+  background: #f6f6f6;
 }
 
 .single-brand-logo {
@@ -409,4 +408,42 @@ body {
   width: 100% !important;
   height: 100% !important;
   opacity: 1 !important;
+}
+
+.w-node_01 {
+  grid-area: span 2 / span 1 / span 2 / span 1
+}
+
+.w-node_02 {
+  grid-area: 1 / 7 / 3 / 8
+}
+
+.w-node_03 {
+  grid-area: 1 / 8 / 3 / 9
+}
+
+.w-node_04 {
+  grid-area: 1 / 10 / 2 / 13
+}
+
+.w-node_05 {
+  grid-area: 2 / 10 / 3 / 13;
+}
+
+.footer-links-container {
+  grid-column-gap: .7vw;
+  grid-row-gap: .7vw;
+  flex-flow: column;
+  align-items: flex-start;
+  padding-left: .5vw;
+  display: flex;
+}
+
+.footer-links.gray {
+  color: #9a9a9a;
+  cursor: default;
+}
+
+.footer-links {
+  transition: opacity .2s;
 }
