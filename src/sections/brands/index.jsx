@@ -13,7 +13,7 @@ export default function Brands() {
             flexFlow="column"
             paddingX="1vw"
         >
-            <h3 className="hero brand-h3">Trusted by the leading brands</h3>
+            <h3 className="hero brand-h3">Trusted by the world's leading brands</h3>
             <Flex
                 columnGap="1vw"
                 rowGap="1vw"

@@ -8,13 +8,12 @@ export default function BrandSwiper({ brand }) {
         <Box
             className="single-brand-container"
             position="relative"
-            height="168px"
+            height="172px"
             display="flex"
             alignItems="center"
             justifyContent="center"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            cursor="pointer"
         >
             <img
                 src={brand.logoDefault}
@@ -23,7 +22,8 @@ export default function BrandSwiper({ brand }) {
                 style={{
                     display: isHovered ? 'none' : 'block',
                     maxWidth: '80%',
-                    maxHeight: '60%',
+                    height: '172px',
+                    // maxHeight: '60%',
                     objectFit: 'contain'
                 }}
             />
@@ -36,8 +36,10 @@ export default function BrandSwiper({ brand }) {
                     display: isHovered ? 'block' : 'none',
                     maxWidth: '80%',
                     maxHeight: '60%',
-                    objectFit: 'contain'
+                    objectFit: 'contain',
+                    zIndex: 2
                 }}
+
             />
 
             <Box
@@ -47,7 +49,7 @@ export default function BrandSwiper({ brand }) {
                 height={isHovered ? "100%" : "40%"}
                 opacity={isHovered ? 1 : 0}
                 transition="all 0.6s cubic-bezier(0.4, 0, 0.2, 1)"
-                zIndex={-1}
+                zIndex={1}
             />
         </Box>
     );
