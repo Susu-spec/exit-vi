@@ -1,4 +1,3 @@
-import useMouse from "@react-hook/mouse-position";
 import { motion, useMotionValue, useSpring } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 import { useCursor } from "../../context/CursorProvider";
@@ -9,6 +8,7 @@ export default function CustomCursor() {
 
     const mouseXPosition = useMotionValue(-50)
     const mouseYPosition = useMotionValue(-50)
+
 
     useEffect(() => {
         const handleMouseMove = (event) => {
@@ -28,8 +28,6 @@ export default function CustomCursor() {
             height: "1vw",
             width: "1vw",
             backgroundColor: "#1d1d1d0d",
-            x: mouseXPosition,
-            y: mouseYPosition,
             transition: {
                 type: "spring",
                 mass: 0.6
@@ -45,8 +43,6 @@ export default function CustomCursor() {
             height: "2.5vw",
             width: "2.5vw",
             fontSize: "0.5rem",
-            x: mouseXPosition,
-            y: mouseYPosition,
             translateX: '-50%',
             translateY: '-50%'
         },
@@ -58,8 +54,6 @@ export default function CustomCursor() {
             fontSize: "0.5rem",
             height: "2.5vw",
             width: "2.5vw",
-            x: mouseXPosition,
-            y: mouseYPosition,
             translateX: '-50%',
             translateY: '-50%'
         }
@@ -71,6 +65,9 @@ export default function CustomCursor() {
         damping: 28
     }
 
+    const mouseX = useSpring(mouseXPosition, spring);
+    const mouseY = useSpring(mouseYPosition, spring);
+
     return (
         <motion.div
             variants={variants}
@@ -79,8 +76,8 @@ export default function CustomCursor() {
                 position: 'fixed',
                 top: 0,
                 left: 0,
-                x: mouseXPosition,
-                y: mouseYPosition,
+                x: mouseX,
+                y: mouseY,
                 pointerEvents: 'none',
                 zIndex: 9999,
                 display: 'flex',
