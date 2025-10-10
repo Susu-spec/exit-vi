@@ -70,7 +70,7 @@ export default function Footer() {
 
             <Typewriter
                 text="ExitVi"
-                fontSize="18.75rem"
+                fontSize="21.75rem"
             />
         </Box>
     )
