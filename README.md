@@ -2,13 +2,13 @@
 
 A modern, animated portfolio website inspired by [FormandFun](https://formandfun.co/). This project is a light rebrand with custom animations and interactive elements.
 
-## 🚀 Built With
+## Built With
 
 - **React** - UI framework
 - **Chakra UI** - Component library and styling
 - **Framer Motion** - Animations and interactions
 
-## ✨ Features
+## Features
 
 - Smooth scroll-based animations
 - Custom cursor with hover interactions
@@ -17,7 +17,7 @@ A modern, animated portfolio website inspired by [FormandFun](https://formandfun
 - Image sliders and galleries
 - Interactive project showcases
 
-## 📦 Installation
+## Installation
 
 ```bash
 # Clone the repository
@@ -34,7 +34,7 @@ npm start
 ```
 
 
-## 🛠️ Development
+## Development
 
 ```bash
 # Run development server
