@@ -9,7 +9,6 @@ export default function HeroCard({ videoUrl }) {
             width="100%"
             height="100%"
             pos="relative"
-            // overflow="hidden"
         >
             <Flex
                 zIndex="2"
@@ -20,17 +19,17 @@ export default function HeroCard({ videoUrl }) {
                 height="100%"
                 width="100%"
                 pos="relative"
-                // className="hero-video-container"
-                // overflow="hidden"
             >
-                <Span 
-                    as="iframe"
+                <video
                     width="100%"
                     height="100%"
-                    allowFullScreen
-                    _loading="lazy"
+                    loading="lazy"
                     src={videoUrl} 
-                    // style={{ overflow: "hidden" }}
+                    loop={true}
+                    playsInline
+                    autoPlay={true}
+                    muted
+                    style={{ borderRadius: ".5rem" }}
                 />
                 <Span className="overflow-overlay" />
             </Flex>

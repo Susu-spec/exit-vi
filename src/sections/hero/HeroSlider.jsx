@@ -5,12 +5,12 @@ import HeroCard from "../../sections/hero/HeroCard";
 import { useCursor } from "../../context/CursorProvider";
 
 const videoUrls = [
-    "https://app.vidzflow.com/v/uKzdfVEd1O?dq=source&ap=true&muted=true&loop=true&ctp=false&bv=true&piv=false&playsinline=true&bc=%234E5FFD&controls=false",
-    "https://app.vidzflow.com/v/VvLTqdZzSL?dq=source&ap=true&muted=true&loop=true&ctp=false&bv=false&piv=false&playsinline=true&bc=%234E5FFD&controls=false",
-    "https://app.vidzflow.com/v/ILLpcsHOAB?dq=source&ap=true&muted=true&loop=true&ctp=false&bv=false&piv=false&playsinline=true&bc=%234E5FFD&controls=false",
-    "https://app.vidzflow.com/v/n0sitYOKLw?dq=source&ap=true&muted=true&loop=true&ctp=false&bv=false&piv=false&playsinline=true&bc=%234E5FFD&controls=false",
-    "https://app.vidzflow.com/v/GWazvydWJs?dq=source&ap=true&muted=true&loop=true&ctp=false&bv=false&piv=false&playsinline=true&bc=%234E5FFD&controls=false",
-    "https://app.vidzflow.com/v/LCVDnqXAon?dq=source&ap=true&muted=true&loop=true&ctp=false&bv=false&piv=false&playsinline=true&bc=%234E5FFD&controls=false"
+    "https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642111/bheeicedy3ihyzyn31iuum3m4cldsk8dqlxe_wh4lip.mp4",
+    "https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642078/bheeicedz8a5tcbo6sr84repcz7zjtyfocua_zaf61j.mp4",
+    "https://res.cloudinary.com/dm7vlpslq/video/upload/v1759639587/ILLpcsHOAB_576p_1744824343_vu4fee.mp4",
+    "https://res.cloudinary.com/dgafp4dx4/video/upload/v1760203506/bheeiced5jnufmkv27k6gsr8vdhpjn2romax_dicsna.mp4",
+    "https://res.cloudinary.com/dm7vlpslq/video/upload/v1759639587/GWazvydWJs_576p_1744824344_wyftge.mp4",
+    "https://res.cloudinary.com/dm7vlpslq/video/upload/v1759639607/LCVDnqXAon_576p_1751149542_a65jqv.mp4"
 ]
 
 
@@ -34,21 +34,19 @@ export default function HeroSlider() {
                         type: "slide",
                         perPage: 3,
                         gap: "1vw",
-                        autoplay: true,
+                        autoplay: false,
                         pauseOnHover: false,
                         arrows: false,
                         pagination: false,
                         drag: true,
-                        start: 0,
-                        fixedWidth: "calc(33.3333% - 0.666667vw)"
+                        fixedWidth: "calc(33.3333% - 0.666667vw)",
                     }}
                     aria-label="Hero Video Slider"
-                    className=""
+                    className="hero-slider-container"
                     >
                         {videoUrls.map((url, index) => (
                             <SplideSlide>
                                 <HeroCard
-                                    // className="slider1"
                                     key={index}
                                     videoUrl={url}
                                 />
