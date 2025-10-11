@@ -1,5 +1,5 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { workItems } from "../../lib/data";
+import { workItems } from "../../constants/data";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 export default function WorkSlider() {

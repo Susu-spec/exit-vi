@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { awards } from "../../lib/data";
+import { awards } from "../../constants/data";
 import React from "react";
 
 export default function Awards() {

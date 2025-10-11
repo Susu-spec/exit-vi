@@ -1,7 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { brandsData } from "../../lib/data";
+import { brandsData } from "../../constants/data";
 import BrandSwiper from "./BrandSwiper";
 
 export default function Brands() {
