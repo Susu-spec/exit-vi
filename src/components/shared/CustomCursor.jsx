@@ -1,6 +1,7 @@
 import { motion, useMotionValue, useSpring } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 import { useCursor } from "../../context/CursorProvider";
+import { TextRevealLines } from "./TextReveal";
 
 
 export default function CustomCursor() {
@@ -33,29 +34,38 @@ export default function CustomCursor() {
                 mass: 0.6
             },
             translateX: '-50%',
-            translateY: '-50%'
+            translateY: '-50%',
+            fontSize: "0rem"
         },
 
         drag: {
             opacity: 1,
-            backgroundColor: "#fff",
-            color: "#000",
+            backgroundColor: "#1d1d1d",
+            color: "#fff",
             height: "2.5vw",
             width: "2.5vw",
             fontSize: "0.5rem",
             translateX: '-50%',
-            translateY: '-50%'
+            translateY: '-50%',
+            transition: {
+                type: "spring",
+                mass: 0.6
+            },
         },
 
         view: {
             opacity: 1,
-            backgroundColor: "#fff",
-            color: "#000",
+            backgroundColor: "#1d1d1d",
+            color: "#fff",
             fontSize: "0.5rem",
             height: "2.5vw",
             width: "2.5vw",
             translateX: '-50%',
-            translateY: '-50%'
+            translateY: '-50%',
+            transition: {
+                type: "spring",
+                mass: 0.6
+            },
         }
     }
 
@@ -70,6 +80,12 @@ export default function CustomCursor() {
 
     return (
         <motion.div
+            initial={{   
+                opacity: 1,
+                height: "1vw",
+                width: "1vw",
+                backgroundColor: "#1d1d1d0d",
+            }}
             variants={variants}
             animate={cursorVariant}
             style={{
@@ -84,11 +100,10 @@ export default function CustomCursor() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 borderRadius: "100%",
-                // mixBlendMode: "difference",
             }}>
-                <span className="cursorText">
+                <TextRevealLines>
                     {cursorText}
-                </span>
+                </TextRevealLines>
         </motion.div>
     )
 }

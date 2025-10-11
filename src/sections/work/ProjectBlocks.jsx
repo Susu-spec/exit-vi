@@ -2,15 +2,26 @@ import { Box, Grid, Flex } from "@chakra-ui/react";
 import HoverVideo from "../../components/shared/HoverVideo";
 import { TbFlagExclamation } from "react-icons/tb";
 import { AnimatePresence, motion } from "framer-motion";
-import SplitText from "../../components/shared/SplitText";
+import { TextRevealLines } from "../../components/shared/TextReveal";
+import { useState } from "react";
+import { useCursor } from "../../context/CursorProvider";
 
 export default function ProjectBlocks() {
+    const [isTextHovered, setIsTextHovered] = useState(false);
+    const { setView, setDefault } = useCursor();
+
     return (
         <Grid
             columnGap="1vw"
             rowGap="1vw"
             paddingTop="4vw"
             paddingX="1vw"
+            onMouseEnter={() => {
+                setView()
+            }}
+            onMouseLeave={() => {
+                setDefault();
+            }}
         >
             <Grid
                 alignItems="stretch"
@@ -35,10 +46,13 @@ export default function ProjectBlocks() {
                 alignItems="stretch"
                 columnGap="1vw"
                 rowGap="1vw"
-                // alignItems="flex-start"
                 display="flex"
             >
-                 <div className="portrait home-video-container">
+                <div 
+                    className="portrait home-video-container"
+                    onMouseEnter={() => setIsTextHovered(true)}
+                    onMouseLeave={() => setIsTextHovered(false)}
+                >
                     <Flex
                         zIndex={5}
                         justifyContent="space-between"
@@ -57,27 +71,11 @@ export default function ProjectBlocks() {
                                 alignItems="center"
                                 width="15vw"
                             >
-                                <AnimatePresence>
-                                    <motion.div
-                                        initial={{ opacity: 1 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                    >
-                                        <SplitText
-                                        initial={{ y: '100' }}
-                                        animate="visible"
-                                        variants={{
-                                            visible: i => ({
-                                                y: 0,
-                                                transition: {
-                                                    delay: i * 0.1
-                                                }}
-                                            )
-                                        }}>
-                                            Oreo Pacman
-                                        </SplitText>
-                                    </motion.div>
-                                </AnimatePresence>
+                                <TextRevealLines
+                                    trigger={isTextHovered}
+                                >
+                                    Oreo Pacman
+                                </TextRevealLines>
                             </Flex>
                         </Flex>
                     </Flex>
