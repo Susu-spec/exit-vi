@@ -59,13 +59,13 @@ export default function Navbar() {
                     columnGap="1vw"
                     display="flex"
                 >
-                    <Link href="/studio" className="nav-link">
+                    <Link href="#" className="nav-link">
                         Studio
                     </Link>
-                    <Link href="/contact" className="nav-link">
+                    <Link href="#" className="nav-link">
                         Contact
                     </Link>
-                    <Link href="/work" className="nav-link">
+                    <Link href="#" className="nav-link">
                         Work
                     </Link>
                 </Box>
