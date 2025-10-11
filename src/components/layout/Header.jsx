@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 
 export default function Header() {
     return (
-        <Box as="header" role="banner" className="header">
+        <Box as="header" role="banner" className="header module-hero">
             <div className="full-video w-embed">
                 <Box id="sizzle-wrapper" aspectRatio={"2/1"} >
                     <video
