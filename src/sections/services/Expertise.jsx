@@ -23,9 +23,7 @@ export default function Expertise() {
                     gap: "1vw",
                     padding: 0,
                     width: "100%",
-                    // Each slide width: calc(33.3333% - 0.666667vw)
                     fixedWidth: "calc(33.3333% - 0.666667vw)",
-                    // height: "505px",
                     drag: true, 
                     arrows: false,
                     pagination: false,
@@ -83,7 +81,7 @@ export default function Expertise() {
                 </SplideSlide>
                 
                 <SplideSlide>
-                    <Box className="expertise-container blue">
+                    <Box className="expertise-container magenta">
                         <Box className="expertise-image-container">
                             <Box borderRadius=".5rem">
                                 <HoverVideo
@@ -124,7 +122,7 @@ export default function Expertise() {
                 </SplideSlide>
                 
                 <SplideSlide>
-                    <Box className="expertise-container blue">
+                    <Box className="expertise-container green">
                         <Box className="expertise-image-container">
                             <Box borderRadius=".5rem">
                                 <HoverVideo
