@@ -5,7 +5,7 @@ import WorkSlider from "./WorkSlider";
 
 export default function Work() {
     return (
-        <Box>
+        <Box as="section">
             <Flex
                 paddingLeft="1vw"
                 paddingRight="1vw"

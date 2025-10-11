@@ -2,12 +2,13 @@ import Lenis from "lenis"
 import Header from "./components/layout/Header"
 import Layout from "./components/layout/Layout"
 import ExitViWrapper from "./components/shared/ExitViWrapper"
-import Hero from "./sections/hero/Hero"
+import Hero from "./sections/hero"
 import { useEffect } from "react"
 import { CursorProvider } from "./context/CursorProvider"
 import CustomCursor from "./components/shared/CustomCursor"
 import Work from "./sections/work"
 import Services from "./sections/services"
+import Brands from "./sections/brands"
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
         <Hero />
         <Work />
         <Services />
+        <Brands />
       </Layout>
     </CursorProvider>
    

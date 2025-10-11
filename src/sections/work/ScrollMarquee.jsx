@@ -42,7 +42,6 @@ export default function ScrollMarquee() {
                         columnGap="2.4vw"
                         rowGap="2.4vw"
                         alignItems="center"
-                        // width="100%"
                     >
                         <Box
                             textAlign="center"
@@ -55,10 +54,16 @@ export default function ScrollMarquee() {
                         >
                             Creative<br />Technology<br />Studio
                         </Box>
-                        <img
+                        {/* <img
                             src="https://cdn.prod.website-files.com/6403ade6e2cfd9c42fe587b0/672e582f6747c6055b813299_FormFun.svg"
                             loading="lazy"
-                            className="logo-marquee" />
+                            className="logo-marquee" /> */}
+                        <Box
+                            className="logo-marquee text"
+                            fontSize="6.125rem"
+                        >
+                            ExitVi
+                        </Box>
                     </Flex>
                 ))}       
             </MotionBox>
