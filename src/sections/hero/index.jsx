@@ -1,5 +1,5 @@
 import { Box, Link, Text } from "@chakra-ui/react";
-import { useScroll, useTransform } from "framer-motion";
+import { useInView, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import HeroSlider from "./HeroSlider";
@@ -15,24 +15,15 @@ const words = [
 export default function Hero() {
     const containerRef = useRef(null);
 
+    const isInView = useInView(containerRef, { once: true, amount: 0.3 });
+
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
     });
 
-    const steps = 15;
-    const colors = Array.from({ length: steps }, (_, i) => {
-        const value = 229 - ((229 - 29) / (steps - 1)) * i;
-        return `rgb(${value},${value},${value})`;
-    });
-
-    const inputRange = Array.from(
-        { length: steps },
-        (_, i) => i / (steps - 1)
-    );
-
-  const color = useTransform(scrollYProgress, inputRange, colors);
-
+    const progress = useSpring(isInView ? scrollYProgress : 0);
+    const totalWords = words.length;
 
     return (
         <Box as="section">
@@ -53,20 +44,30 @@ export default function Hero() {
                 >
                     <Box marginLeft='25%' display="inline">
                         <motion.span
-                            style={{ color}}
+                            style={{
+                                color: `rgb(29, 29, 29)`
+                            }}
                             className="inline">
                                 {words[0]}&nbsp;
                         </motion.span>
                     </Box>
-                    {words.filter((word) => word !== words[0]).map((word, index) => (
-                        <motion.span
-                            key={index}
-                            style={{ color}}
-                            className="inline-block"
-                        >
-                            {word}&nbsp;
-                        </motion.span>
-                    ))}
+                    {words.slice(1).map((word, index) => {
+                        const staggerDelay = 0.2;
+                        const start = (index / totalWords) * (1 - staggerDelay);
+                        const end = start + staggerDelay;
+                        
+                        const itemColor = useTransform(
+                            scrollYProgress,
+                            [start, end],
+                            ['rgb(229, 229, 229)', 'rgb(29, 29, 29)']
+                        );
+                        
+                        return (
+                            <motion.span key={index} style={{ color: itemColor }}>
+                                {word}&nbsp;
+                            </motion.span>
+                        );
+                    })}
                 
                 </Box>
                 <Link 
