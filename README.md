@@ -67,7 +67,7 @@ exit-vi/
 - **Scroll Animations** - Color transitions and stagger effects
 
 ##  Live Demo
-Check out the live app here: [susu-blog.vercel.app](https://susu-blog.vercel.app/)
+Check out the live app here: [susu-blog.vercel.app](https://exit-vi.vercel.app/)
 
 ## Credits
 
