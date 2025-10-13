@@ -7,8 +7,10 @@ export default function Work() {
     return (
         <Box as="section">
             <Flex
-                paddingLeft="1vw"
-                paddingRight="1vw"
+                paddingX={{
+                    base: "2vw",
+                    lg: "1vw"
+                }}
                 alignItems="flex-start"
                 justifyContent="space-between"
                 width="100%"
@@ -20,6 +22,10 @@ export default function Work() {
                     flexFlow="column"
                     marginTop=".8vw"
                     justifyContent="flex-start"
+                    display={{
+                        base: "none",
+                        lg: "flex"
+                    }}
                 >
                     
                     <p className="text work-h4">Selected Work</p>

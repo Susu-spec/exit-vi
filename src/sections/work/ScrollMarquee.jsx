@@ -23,7 +23,10 @@ export default function ScrollMarquee() {
         <Box
             display="flex"
             width="100%"
-            paddingY="8vw"
+            paddingY={{
+                base: "20vw",
+                lg: "8vw"
+            }}
             overflow="hidden"
             flexFlow="column"
             ref={containerRef}
@@ -31,23 +34,38 @@ export default function ScrollMarquee() {
             <MotionBox
                 style={{ x }}
                 display="flex"
-                columnGap="2.4vw"
-                rowGap="2.4vw"
+                columnGap={{
+                    base: "8vw",
+                    lg: "2.4vw"
+                }}
+                rowGap={{
+                    base: "8vw",
+                    lg: "2.4vw"
+                }}
                 alignItems="center"
                 width="100%"
                 height="6vw"
             >
                 {items.map((item, i) => (
                     <Flex
-                        columnGap="2.4vw"
-                        rowGap="2.4vw"
+                        columnGap={{
+                            base: "8vw",
+                            lg: "2.4vw"
+                        }}
+                        rowGap={{
+                            base: "8vw",
+                            lg: "2.4vw"
+                        }}
                         alignItems="center"
                     >
                         <Box
                             textAlign="center"
                             textTransform="uppercase"
                             fontFamily="'Aeonik', sans-serif"
-                            fontSize=".6vw"
+                            fontSize={{
+                                base: "1.4vw",
+                                lg: ".6vw"
+                            }}
                             fontWeight={500}
                             lineHeight={1.1}
                             verticalAlign="middle"
@@ -60,7 +78,10 @@ export default function ScrollMarquee() {
                             className="logo-marquee" /> */}
                         <Box
                             className="logo-marquee text"
-                            fontSize="6.125rem"
+                            fontSize={{
+                                base: "3.5rem",
+                                lg: "6.125rem"
+                            }}
                         >
                             ExitVi
                         </Box>

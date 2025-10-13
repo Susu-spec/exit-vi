@@ -61,12 +61,12 @@ export default function Typewriter({
     return (
         <MotionBox
             style={{
-                fontSize,
                 display: "inline-flex",
                 fontWeight: "bold",
                 alignItems: "center",
                 cursor: "default"
             }}
+            fontSize={fontSize}
             variants={container}
             initial="hidden"
             whileInView="visible"

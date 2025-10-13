@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { awards } from "../../constants/data";
 import React from "react";
@@ -6,20 +6,47 @@ import React from "react";
 export default function Awards() {
     return (
         <Box
-            columnGap="1vw"
-            rowGap="1vw"
-            paddingTop="4vw"
-            paddingX="1vw"
+            columnGap={{
+                base: "2vw",
+                lg: "1vw"
+            }}
+            rowGap={{
+                base: "2vw",
+                lg: "1vw"
+            }}
+            paddingTop={{
+                base: "6vw",
+                lg: "4vw"
+            }}
+            paddingX={{
+                base: "2vw",
+                lg: "1vw"
+            }}
             display="flex"
             flexDir="column"
-            marginBottom="2vw"
+            marginBottom={{
+                base: "4vw",
+                lg: "2vw"
+            }}
         >
-            <h2
-                className="work-title">
+            <Text
+                as="h2"
+                className="work-title"
+                fontSize={{
+                    base: "14vw",
+                    md: "9vw",
+                    lg: "7vw"
+                }}>
                     An Award 
                     <br />
-                    Winning Studio
-            </h2>
+                    Winning 
+                    <Box
+                        display={{
+                            base: "block",
+                            lg: "none"
+                        }}></Box>
+                    Studio
+            </Text>
             <Box
                 marginTop="6vw"
                 marginBottom="2vw"
@@ -64,7 +91,11 @@ export default function Awards() {
                                     <Box
                                         width="41%"
                                         fontFamily="'Aeonik', sans-serif"
-                                        fontSize="1.5vw"
+                                        fontSize={{
+                                            base: "2.6vw",
+                                            md: "2vw",
+                                            lg: "1.5vw"
+                                        }}
                                         lineHeight="120%"
                                     >
                                         {award.client}
@@ -74,7 +105,10 @@ export default function Awards() {
                                         rowGap=".5vw"
                                         flexFlow="column"
                                         width="22%"
-                                        fontSize=".9vw"
+                                        fontSize={{
+                                            base: "1.2vw",
+                                            lg: ".9vw"
+                                        }}
                                         lineHeight={1}
                                     >
                                         <p className="text label-info-awards">Project</p>
@@ -106,6 +140,7 @@ export default function Awards() {
                                         fontSize=".9vw"
                                         lineHeight={1}
                                         textAlign="right"
+                                        alignItems="flex-end"
                                     >
                                         <p className="text label-info-awards">Year</p>
                                         <p className="text description-info-awards">{award.year}</p>

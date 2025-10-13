@@ -32,6 +32,10 @@ export default function Navbar() {
                     position="relative"
                     overflow="hidden"
                     width="100%"
+                    display={{
+                        base: "none",
+                        lg: "block"
+                    }}
                 >
                     <p className="nav-info">Creative Technology Studio</p>
                 </Box>
@@ -56,7 +60,10 @@ export default function Navbar() {
                 flexDirection="column"
             >
                 <Box
-                    columnGap="1vw"
+                    columnGap={{
+                        base: "1.6vw",
+                        lg: "1vw"
+                    }}
                     display="flex"
                 >
                     <Link href="#" className="nav-link">

@@ -1,14 +1,46 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 import HoverVideo from "../../components/shared/HoverVideo";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 export default function Expertise() {
+    const fixedWidth = useBreakpointValue({
+        base: "calc(80% - 0vw)",
+        lg:  "calc(33.3333% - 0.666667vw)",
+    });
+
+    const perPage = useBreakpointValue({
+        base: 1,
+        lg: 3
+    });
+
+    const pagination = useBreakpointValue({
+        base: true,
+        lg: false
+    });
+
+    const gap = useBreakpointValue({
+        base: "2vw",
+        lg: "1vw"
+    })
+
     return (
         <Box
-            columnGap="1vw"
-            rowGap="1vw"
-            paddingX="1vw"
-            paddingBottom="8vw"
+            columnGap={{
+                base: "2vw",
+                lg: "1vw"
+            }}
+            rowGap={{
+                base: "2vw",
+                lg: "1vw"
+            }}
+            paddingX={{
+                base: "2vw",
+                lg: "1vw"
+            }}
+            paddingBottom={{
+                base: "12vw",
+                lg: "8vw"
+            }}
             display="flex"
             flexDir="column"
         >
@@ -18,15 +50,15 @@ export default function Expertise() {
             <Splide
                 options={{
                     type: "slide",
-                    perPage: 3,
+                    perPage: perPage,
                     perMove: 1,
-                    gap: "1vw",
+                    gap: gap,
                     padding: 0,
                     width: "100%",
-                    fixedWidth: "calc(33.3333% - 0.666667vw)",
+                    fixedWidth: fixedWidth,
                     drag: true, 
                     arrows: false,
-                    pagination: false,
+                    pagination: pagination,
                     focus: 0,
                     trimSpace: false,
                     breakpoints: {

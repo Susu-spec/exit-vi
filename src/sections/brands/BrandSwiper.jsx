@@ -1,14 +1,17 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useBreakpointValue } from "@chakra-ui/react";
 import { useState } from "react";
 
 export default function BrandSwiper({ brand }) {
     const [isHovered, setIsHovered] = useState(false);
-
+    const height = useBreakpointValue({
+        base: "16.25rem",
+        lg: "10.75rem"
+    })
     return (
         <Box
             className="single-brand-container"
             position="relative"
-            height="172px"
+            height={height}
             display="flex"
             alignItems="center"
             justifyContent="center"

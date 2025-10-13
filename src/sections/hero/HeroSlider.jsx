@@ -1,4 +1,4 @@
-import { Box, Grid } from "@chakra-ui/react";
+import { Box, Grid, useBreakpointValue } from "@chakra-ui/react";
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css';
 import HeroCard from "../../sections/hero/HeroCard";
@@ -17,10 +17,32 @@ const videoUrls = [
 export default function HeroSlider() {
     const cursor = useCursor();
     const { setDrag, setView, setDefault } = cursor;
+    const fixedWidth = useBreakpointValue({
+        base: "calc(80% + 0vw)",
+        lg: "calc(33.3333% - 0.666667vw)"
+    })
+
+    const pagination = useBreakpointValue({
+        base: true,
+        lg: false
+    });
+
+    const gap = useBreakpointValue({
+        base: "3vw",
+        lg: "1vw"
+    })
+
+    const perPage = useBreakpointValue({
+        base: 1,
+        lg: 3
+    })
 
     return (
         <Grid 
-            paddingY="8vw" 
+            paddingY={{
+                base: "14vw",
+                lg: "8vw"
+            }} 
             className="hero-slider-container"
             columnGap="8vw" 
             rowGap="8vw" 
@@ -32,14 +54,15 @@ export default function HeroSlider() {
                 <Box overflow="hidden" width="100%" height="100%" position="relative" paddingLeft="1vw">
                     <Splide options={{
                         type: "slide",
-                        perPage: 3,
-                        gap: "1vw",
+                        perPage: perPage,
+                        perMove: 1,
+                        gap: gap,
                         autoplay: false,
                         pauseOnHover: false,
                         arrows: false,
-                        pagination: false,
+                        pagination: pagination,
                         drag: true,
-                        fixedWidth: "calc(33.3333% - 0.666667vw)",
+                        fixedWidth: fixedWidth,
                     }}
                     aria-label="Hero Video Slider"
                     className="hero-slider-container"

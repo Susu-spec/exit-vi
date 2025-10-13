@@ -31,8 +31,18 @@ export default function Hero() {
                 ref={containerRef}
                 as="section" 
                 role="region" 
-                marginTop={'8vw'}
-                px='1vw'
+                marginTop={{
+                    base: "14vw",
+                    lg: "8vw"
+                }}
+                marginBottom={{
+                    base: "4vw",
+                    lg: 0
+                }}
+                px={{
+                    base: "2vw",
+                    lg: "1vw"
+                }}
                 pos='relative'
             >
                 <Text marginTop='.6vw' pos="absolute" className="studio-h4">
@@ -63,7 +73,7 @@ export default function Hero() {
                         );
                         
                         return (
-                            <motion.span key={index} style={{ color: itemColor }}>
+                            <motion.span key={index} style={{ color: itemColor }} className="word">
                                 {word}&nbsp;
                             </motion.span>
                         );

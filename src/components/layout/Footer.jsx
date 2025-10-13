@@ -5,13 +5,22 @@ export default function Footer() {
     return (
         <Box
             as="footer"
-            padding="6vw 1vw 1vw">
+            padding={{
+                base: "12vw 2vw 4vw",
+                lg: "6vw 1vw 1vw"
+            }}>
             <Grid
                 gridColumnGap={0}
-                gridRowGap="2vw"
+                gridRowGap={{
+                    base: "6vw",
+                    lg: "2vw"
+                }}
                 gridTemplateRows="auto"
                 gridAutoColumns="auto"
-                marginBottom="10vw"
+                marginBottom={{
+                    base: "12vw",
+                    lg: "10vw"
+                }}
                 padding={0}
             >
                 <Box className="w-node_01">
@@ -70,7 +79,10 @@ export default function Footer() {
 
             <Typewriter
                 text="ExitVi"
-                fontSize="21.75rem"
+                fontSize={{
+                    base: "7.75rem",
+                    lg: "21.75rem"
+                }}
             />
         </Box>
     )
