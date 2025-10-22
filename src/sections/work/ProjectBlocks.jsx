@@ -1,21 +1,18 @@
-import { Box, Grid, Flex } from "@chakra-ui/react";
+import { Box, Grid, Flex, useBreakpoint } from "@chakra-ui/react";
 import HoverVideo from "../../components/shared/HoverVideo";
 import { TbFlagExclamation } from "react-icons/tb";
 import { AnimatePresence, motion } from "framer-motion";
 import { TextRevealLines } from "../../components/shared/TextReveal";
 import { useState } from "react";
 import { useCursor } from "../../context/CursorProvider";
+import PortfolioBlock from "./PortfolioBlock";
 
 export default function ProjectBlocks() {
-    const [isTextHovered, setIsTextHovered] = useState(false);
     const { setView, setDefault } = useCursor();
 
     return (
         <Grid
-            columnGap="1vw"
-            rowGap="1vw"
-            paddingTop="4vw"
-            paddingX="1vw"
+            className="module-blocks"
             onMouseEnter={() => {
                 setView()
             }}
@@ -23,74 +20,42 @@ export default function ProjectBlocks() {
                 setDefault();
             }}
         >
-            <Grid
-                alignItems="stretch"
-                columnGap="1vw"
-                rowGap="1vw"
-                display="flex"
+            <Flex
+                className="portfolio-container"
             >
-                <div className="landscape home-video-container">
-                    <HoverVideo
-                        src="http://res.cloudinary.com/dm7vlpslq/video/upload/v1759642096/bheeicdi21w0hkxyqiby6vxovghp64qh2wan_qwmt7l.mp4"
-                        poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014047/oreo-thumbnail_ahdxpv.jpg"
-                    />
-                </div>
-                <div className="portrait home-video-container">
-                    <HoverVideo
-                        src="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642676/YThAIwoXKB_576p_1744824072_ccmg6f.mp4"
-                        poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014077/icecream-thumbnail_zytvtb.jpg"
-                    />
-                </div>
-            </Grid>
-             <Grid
-                alignItems="stretch"
-                columnGap="1vw"
-                rowGap="1vw"
-                display="flex"
+                <PortfolioBlock
+                    tags={["Oreo X Pacman", "AR Experience"]}
+                    videoSrc="http://res.cloudinary.com/dm7vlpslq/video/upload/v1759642096/bheeicdi21w0hkxyqiby6vxovghp64qh2wan_qwmt7l.mp4"
+                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014047/oreo-thumbnail_ahdxpv.jpg"
+                    orientation="landscape"
+                    textColor="text-white"
+                />
+                <PortfolioBlock
+                    tags={["Doordash Summer of Dashpass", "Campaign"]}
+                    videoSrc="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642676/YThAIwoXKB_576p_1744824072_ccmg6f.mp4"
+                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014077/icecream-thumbnail_zytvtb.jpg"
+                    orientation="portrait"
+                    textColor="text-white"
+                />
+            </Flex>
+             <Flex
+                className="portfolio-container"
             >
-                <div 
-                    className="portrait home-video-container"
-                    onMouseEnter={() => setIsTextHovered(true)}
-                    onMouseLeave={() => setIsTextHovered(false)}
-                >
-                    <Flex
-                        zIndex={5}
-                        justifyContent="space-between"
-                        alignItems="flex-start"
-                        paddingTop="1vw"
-                        paddingX="1vw"
-                        position="absolute"
-                    >
-                        <Flex
-                            alignItems="flex-start"
-                        >
-                            <Flex
-                                rowGap=".6vw"
-                                columnGap=".6vw"
-                                justifyContent="flex-start"
-                                alignItems="center"
-                                width="15vw"
-                            >
-                                <TextRevealLines
-                                    trigger={isTextHovered}
-                                >
-                                    Oreo Pacman
-                                </TextRevealLines>
-                            </Flex>
-                        </Flex>
-                    </Flex>
-                    <HoverVideo
-                        src="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642080/bheeicea8cwvkf21vcnbg8jhx3wo0wyb42im_q9yvuz.mp4"
-                        poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014816/coin-thumbnail-new_o9njeo.jpg"
-                    />
-                </div>
-                <div className="landscape home-video-container">
-                    <HoverVideo
-                        src="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642089/bheeicea3wowr2ifyqckn5737cnu42mewpr1_a8wqzo.mp4"
-                        poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014101/goggles_dzwjen.jpg"
-                    />
-                </div>
-            </Grid>
+                 <PortfolioBlock
+                    tags={["Widlet"]} 
+                    textColor="text-black"
+                    orientation="portrait"
+                    videoSrc="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642080/bheeicea8cwvkf21vcnbg8jhx3wo0wyb42im_q9yvuz.mp4"
+                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014816/coin-thumbnail-new_o9njeo.jpg"
+                />
+                <PortfolioBlock
+                    tags={["Powerade Mindzone", "VR Experience"]} 
+                    textColor="text-white"
+                    orientation="landscape"
+                    videoSrc="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642089/bheeicea3wowr2ifyqckn5737cnu42mewpr1_a8wqzo.mp4"
+                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014101/goggles_dzwjen.jpg"
+                />
+            </Flex>
         </Grid>
     )
 }

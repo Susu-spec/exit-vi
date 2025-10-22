@@ -146,6 +146,33 @@ body {
   display: inline;
 }
 
+.project-block-title {
+  color: #fff;
+  cursor: none;
+  font-size: 1dvw;
+  line-height: 140%;
+  text-decoration: none;
+  transition: opacity .2s;
+  overflow: hidden;
+}
+
+.project-name-container {
+  column-gap: 0.6vw;
+  row-gap: 0.6vw;
+  justify-content: flex-start;
+  align-items: center;
+  width: 15dvw;
+  display: flex;
+}
+
+.text-black {
+  color: #000;
+}
+
+.text-white {
+  color: #fff;
+}
+
 .studio-h4 {
   color: #1d1d1d;
   text-align: left;
@@ -223,23 +250,16 @@ body {
 }
 
 .full-opacity {
-  opacity: 100;
+  opacity: 1;
 }
 
 
 .home-video-container {
-  background-color: #f5f4f2;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: .5rem;
   display: flex;
   position: relative;
   overflow: hidden;
-}
-
-.work-tags-container {
-  opacity: 0;
-  position: absolute;
-  width: 100%;
 }
 
 .landscape {
@@ -491,6 +511,49 @@ body {
   padding-bottom: 8dvw;
 }
 
+.portfolio-container {
+  grid-column-gap: 1vw;
+  grid-row-gap: 1vw;
+  align-items: flex-start;
+  display: flex;
+}
+
+.inner-video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.work-tags-container {
+  z-index: 5;
+  justify-content: space-between;
+  align-self: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  display: flex;
+  position: absolute;
+}
+
+
+
+.module-blocks {
+  grid-column-gap: 1vw;
+  grid-row-gap: 1vw;
+  flex-flow: column;
+  padding-top: 4vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  display: flex;
+}
+
+.work-plus {
+  display: block;
+}
+
 @media screen and (max-width: 991px) {
   .navbar {
     padding-left: 2dvw;
@@ -635,6 +698,60 @@ body {
     grid-column-gap: 1.2vw;
     grid-row-gap: 1.2vw;
   }
+
+  .landscape {
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .portfolio-container {
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-video-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .inner-video {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+  }
+
+  .work-tags-container {
+    padding-left: 0px;
+    padding-right: 0px;
+    position: static;
+  }
+
+  .project-name-container {
+    column-gap: 1.2dvw;
+    row-gap: 1.2dvw;
+    width: auto;
+  }
+
+  .project-block-title {
+    color: #000;
+  }
+
+  .work-plus {
+    display: none;
+  }
+
+
+  .work-tags-title {
+    white-space: wrap;
+  }
+
+  .work-description {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-size: 1.2dvw;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -648,7 +765,7 @@ body {
   }
 
   .nav-link {
-    font-size: 4dvw !important;
+    font-size: 2.4dvw;
   }
 
   .module-hero {
@@ -697,12 +814,60 @@ body {
   .w-node_05 {
     grid-area: 3 / 5 / 4 / 13 !important;
   }
+
+  .module-blocks {
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vw;
+    padding-top: 6vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .landscape {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .portrait {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .portfolio-container {
+    grid-column-gap: 8vw;
+    grid-row-gap: 8vw;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 6vw;
+  }
+
+  .work-tags-container {
+    padding-top: 2dvw;
+  }
+
+  .project-name-container {
+    column-gap: 1.4dvw;
+    row-gap: 1.4dvw;
+  }
+
+  .project-block-title {
+    font-size: 3.6dvw;
+  }
+
+  .work-description {
+    font-size: 1.8dvw;
+  }
 }
 
 @media screen and (max-width: 479px) {
   .navbar {
     padding-left: 4dvw;
     padding-right: 4dvw;
+  }
+
+  .nav-link {
+    font-size: 4dvw;
   }
 
   .module-hero {
@@ -726,5 +891,39 @@ body {
   .module-slider {
     padding-top: 20dvw;
     padding-bottom: 20dvw;
+  }
+
+  .module-blocks {
+    grid-column-gap: 2dvw;
+    grid-row-gap: 2dvw;
+    padding-top: 8dvw;
+    padding-left: 4dvw;
+    padding-right: 4dvw;
+  }
+
+  .home-video-container {
+    margin-bottom: 4dvw;
+  }
+
+  .portfolio-container {
+    grid-column-gap: 6vw;
+    grid-row-gap: 6vw;
+    margin-bottom: 4vw;
+  }
+
+  .portrait {
+    aspect-ratio: auto;
+  }
+
+  .work-tags-container {
+    padding-top: 4dvw;
+  }
+
+  .project-block-title {
+    font-size: 4.8dvw;
+  }
+
+  .work-description {
+    font-size: 2.4dvw;
   }
 }

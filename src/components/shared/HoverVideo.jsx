@@ -1,11 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { useCursor } from "../../context/CursorProvider";
+import { useBreakpoint, useBreakpointValue } from "@chakra-ui/react";
 
 
 export default function HoverVideo({ src, poster }) {
   const videoRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const { setView, setDefault } = useCursor();
+  const responsiveHovered = useBreakpointValue({
+    base: true,
+    lg: isHovered
+  })
 
   useEffect(() => {
     const video = videoRef.current;
@@ -30,6 +35,7 @@ export default function HoverVideo({ src, poster }) {
         setDefault();
         setIsHovered(false)
     }}
+    className="relative overflow-hidden"
     >
       <video
         ref={videoRef}
@@ -38,10 +44,9 @@ export default function HoverVideo({ src, poster }) {
         muted
         loop
         playsInline
-        autoPlay={isHovered}
+        autoPlay={responsiveHovered}
+        className="inner-video"
         style={{
-            width: "100%",
-            height: "100%",
             objectFit: "cover",
             transition: "opacity .3s ease-in-out",
             borderRadius: ".5rem",
