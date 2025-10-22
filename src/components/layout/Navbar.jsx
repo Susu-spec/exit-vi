@@ -9,7 +9,7 @@ export default function Navbar() {
             className="navbar"
             templateColumns="repeat(4, 1fr)"
             templateRows="auto"
-            position="absolute"
+            position="fixed"
         >
             <Flex 
                 alignItems="flex-start"

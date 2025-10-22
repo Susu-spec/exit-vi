@@ -9,6 +9,7 @@ const MotionFlex = motion(Flex);
 export default function ExitViWrapper() {
     const animateHeight = useBreakpointValue({
         base: "30dvh",
+        md: "40dvh",
         lg: "60dvh"
     })
 
@@ -28,6 +29,7 @@ export default function ExitViWrapper() {
                 text="ExitVi"
                 fontSize={{
                     base: "3.375rem",
+                    md: "6.75rem",
                     lg: "8.875rem"
                 }}
             />

@@ -107,6 +107,10 @@ body {
   padding-right: 1vw;
 }
 
+.text-studio-indent {
+  margin-left: 25%;
+}
+
 .full-video {
   box-sizing: border-box;
   aspect-ratio: 2;
@@ -160,6 +164,7 @@ body {
 .studio-h4.expertise-p {
   font-size: 1vw;
 }
+
 .hero-link {
   color: #fff;
   text-align: center;
@@ -634,6 +639,17 @@ body {
     padding-right: 2dvw;
   }
 
+  .text-studio-indent {
+    margin-left: 40%;
+  }
+
+  .hero-link {
+    border-radius: 4dvw;
+    padding-top: 2dvw;
+    padding-bottom: 2dvw;
+    font-size: 2.4dvw;
+  }
+
   .work-title {
     font-size: 14vw;
   }
@@ -672,5 +688,12 @@ body {
     margin-bottom: 12dvw;
     padding-left: 4dvw;
     padding-right: 4dvw;
+  }
+
+  .hero-link {
+    border-radius: 6dvw;
+    width: 100%;
+    padding: 3.2dvw 2.8dvw;
+    font-size: 4dvw;
   }
 }

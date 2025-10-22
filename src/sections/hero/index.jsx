@@ -26,7 +26,7 @@ export default function Hero() {
     const totalWords = words.length;
 
     return (
-        <Box as="section">
+        <Box as="section" className="module-hero">
             <Box 
                 ref={containerRef}
                 as="section" 
@@ -52,7 +52,7 @@ export default function Hero() {
                 <Box
                     className="hero"
                 >
-                    <Box marginLeft='25%' display="inline">
+                    <Box className="text-studio-indent" display="inline">
                         <motion.span
                             style={{
                                 color: `rgb(29, 29, 29)`
