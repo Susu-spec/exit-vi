@@ -572,6 +572,42 @@ body {
   overflow: hidden;
 }
 
+.awards .splide__list {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.items-awards {
+  color: #1d1d1d;
+  border-top: 1px solid #1d1d1d33;
+  width: 100%;
+  padding-top: 1.5dvw;
+  padding-bottom: 2.5dvw;
+  display: flex
+}
+
+.order-awards {
+  width: 10%;
+}
+
+.client-awards {
+  align-self: flex-start;
+  width: 41%;
+  font-size: 1.5dvw;
+}
+
+.award-year {
+  text-align: right;
+  width: 6%;
+}
+
+
+
 @media screen and (max-width: 991px) {
   .navbar {
     padding-left: 2dvw;
@@ -669,18 +705,17 @@ body {
   }
 
   .logo-marquee {
-    max-width: 50vw;
+    max-width: 50dvw;
   }
 
   .label-info-awards {
-    font-size: 1.2vw;
+    font-size: 1.2dvw;
     line-height: 1.4;
   }
 
   .text.description-info-awards {
-    width: 70%;
-    font-size: 1.3vw !important;
-    line-height: 1.5vw !important;
+    font-size: 1.3dvw;
+    line-height: 1.5dvw;
   }
 
   .brands-block-container {
@@ -806,6 +841,26 @@ body {
   .expertise-container.green {
     background-color: #e5f4e1;
   }
+
+  .order-awards {
+    width: 8%;
+    font-size: 1.2dvw;
+    line-height: 1.4;
+  }
+
+  .client-awards {
+    font-size: 2dvw;
+  }
+
+  .single-brand-container.swiper-slide.coca-cola {
+    background-color: #e61d2b;
+  }
+
+  .award-year {
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 6%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -844,11 +899,6 @@ body {
 
   .work-title {
     font-size: 14vw;
-  }
-
-  .description-info-awards {
-    font-size: 1.4vw !important;
-    line-height: 1.7vw !important;
   }
 
   .w-node_01 {
@@ -928,7 +978,24 @@ body {
     padding: 4dvw;
   }
 
+  .items-awards {
+    column-gap: 1dvw;
+    row-gap: 1dvw;
+  }
  
+  .order-awards {
+    width: 6%;
+    font-size: 1.9dvw;
+  }
+
+  .client-awards {
+    font-size: 2.6dvw;
+  }
+
+  .text.description-info-awards {
+    font-size: 1.4dvw;
+    line-height: 1.7dvw;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1012,4 +1079,45 @@ body {
   .expertise-image-container:hover {
     padding: 4dvw;
   }
+
+  .awards .splide__list {
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .items-awards {
+    column-gap: 3.5dvw;
+    row-gap: 3.5dvw;
+    flex-flow: column;
+    padding-top: 2.5dvw;
+  }
+
+  .order-awards {
+    width: 100%;
+    font-size: 4.4dvw;
+  }
+
+  .client-awards {
+    width: 100%;
+    padding-bottom: 3.5dvw;
+    font-size: 6dvw;
+  }
+
+  .label-info-awards {
+    font-size: 3.6vw;
+  }
+
+  .text.description-info-awards {
+    width: 80%;
+    font-size: 3.6dvw;
+    line-height: 4dvw;
+  }
+
+  .award-year {
+    text-align: unset;
+    align-items: unset;
+    width: 100%;
+  }
+  
 }

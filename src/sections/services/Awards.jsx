@@ -1,9 +1,14 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { awards } from "../../constants/data";
 import React from "react";
 
 export default function Awards() {
+    const pagination = useBreakpointValue({
+        base: true,
+        lg: false
+    })
+
     return (
         <Box
             columnGap={{
@@ -50,6 +55,7 @@ export default function Awards() {
             <Box
                 marginTop="6vw"
                 marginBottom="2vw"
+                className=""
             >
                 <Splide
                     options={{
@@ -59,43 +65,28 @@ export default function Awards() {
                         gap: 0,
                         padding: 0,
                         arrows: false,
-                        pagination: false,
+                        pagination: pagination,
                         drag: true,
                         keyboard: true,
                         autoHeight: true,
                         speed: 600,
                     }}
+                    className="awards"
                 >
-                    <Flex
-                        flexFlow="column"
-                        justifyContent="flex-start"
-                        width="100%"
-                    >
                         {awards.map((award, index) => (
-                            <SplideSlide key={index}>
+                            <SplideSlide key={index} className="awards">
                                 <Box
-                                    borderTop="1px solid #1d1d1d33"
-                                    width="100%"
-                                    paddingTop="1.5vw"
-                                    paddingBottom="2.5vw"
-                                    display="flex"
+                                    className="items-awards"
                                 >
-                                    <Box 
-                                        width="10%"
+                                    <Box
                                         fontFamily="'Aeonik', sans-serif"
-                                        fontSize=".9vw"
-                                        lineHeight="1"
+                                        className="order-awards"
                                     >
                                         {award.order}
                                     </Box>
                                     <Box
-                                        width="41%"
                                         fontFamily="'Aeonik', sans-serif"
-                                        fontSize={{
-                                            base: "2.6vw",
-                                            md: "2vw",
-                                            lg: "1.5vw"
-                                        }}
+                                        className="client-awards"
                                         lineHeight="120%"
                                     >
                                         {award.client}
@@ -104,10 +95,14 @@ export default function Awards() {
                                         columnGap=".5vw"
                                         rowGap=".5vw"
                                         flexFlow="column"
-                                        width="22%"
+                                        width={{
+                                            base: "100%",
+                                            md: "22%",
+                                        }}
                                         fontSize={{
-                                            base: "1.2vw",
-                                            lg: ".9vw"
+                                            base: "4.4dvw",
+                                            md: "1.9dvw",
+                                            lg: ".9dvw"
                                         }}
                                         lineHeight={1}
                                     >
@@ -118,8 +113,15 @@ export default function Awards() {
                                         columnGap=".5vw"
                                         rowGap=".5vw"
                                         flexFlow="column"
-                                        width="22%"
-                                        fontSize=".9vw"
+                                        width={{
+                                            base: "100%",
+                                            md: "22%"
+                                        }}
+                                        fontSize={{
+                                            base: "4.4dvw",
+                                            md: "1.9dvw",
+                                            lg: ".9dvw"
+                                        }}
                                         lineHeight={1}
                                     >
                                         <p className="text label-info-awards">Category</p>
@@ -136,11 +138,13 @@ export default function Awards() {
                                         columnGap=".5vw"
                                         rowGap=".5vw"
                                         flexFlow="column"
-                                        width="6%"
-                                        fontSize=".9vw"
+                                        fontSize={{
+                                            base: "4.4dvw",
+                                            md: "1.9dvw",
+                                            lg: ".9dvw"
+                                        }}
                                         lineHeight={1}
-                                        textAlign="right"
-                                        alignItems="flex-end"
+                                        className="award-year"
                                     >
                                         <p className="text label-info-awards">Year</p>
                                         <p className="text description-info-awards">{award.year}</p>
@@ -148,7 +152,6 @@ export default function Awards() {
                                 </Box>
                             </SplideSlide>
                         ))}
-                    </Flex>
                 </Splide>
             </Box>
         </Box>
