@@ -21,14 +21,7 @@ export default function ScrollMarquee() {
     const items = Array.from({ length: 15 });
     return (
         <Box
-            display="flex"
-            width="100%"
-            paddingY={{
-                base: "20vw",
-                lg: "8vw"
-            }}
-            overflow="hidden"
-            flexFlow="column"
+            className="marquee-block-scroll"
             ref={containerRef}
         >
             <MotionBox

@@ -53,8 +53,8 @@ body {
 
 .navbar {
   z-index: 100;
-  grid-column-gap: 1vw;
-  grid-row-gap: 0px;
+  column-gap: 1vw;
+  row-gap: 0px;
   background-color: #fff;
   width: 100%;
   height: 46px;
@@ -329,10 +329,11 @@ body {
 }
 
 .expertise-container {
-  grid-column-gap: 2vw;
-  grid-row-gap: 2vw;
+  column-gap: 2vw;
+  row-gap: 2vw;
   cursor: auto;
   border-radius: 8px;
+  height: 100%;
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -366,8 +367,8 @@ body {
 }
 
 .expertise-image-container {
-  grid-column-gap: 2vw;
-  grid-row-gap: 2vw;
+  column-gap: 2vw;
+  row-gap: 2vw;
   border-radius: 8px;
   flex-flow: column;
   flex: 1;
@@ -476,8 +477,8 @@ body {
 }
 
 .footer-links-container {
-  grid-column-gap: .7vw;
-  grid-row-gap: .7vw;
+  column-gap: .7vw;
+  row-gap: .7vw;
   flex-flow: column;
   align-items: flex-start;
   padding-left: .5vw;
@@ -512,8 +513,8 @@ body {
 }
 
 .portfolio-container {
-  grid-column-gap: 1vw;
-  grid-row-gap: 1vw;
+  column-gap: 1vw;
+  row-gap: 1vw;
   align-items: flex-start;
   display: flex;
 }
@@ -523,6 +524,12 @@ body {
   height: 100%;
   position: relative;
   aspect-ratio: 16 / 9;
+}
+
+.inner-video.expertise {
+  aspect-ratio: 1;
+  border-radius: .5rem;
+  overflow: hidden;
 }
 
 .work-tags-container {
@@ -541,8 +548,8 @@ body {
 
 
 .module-blocks {
-  grid-column-gap: 1vw;
-  grid-row-gap: 1vw;
+  column-gap: 1vw;
+  row-gap: 1vw;
   flex-flow: column;
   padding-top: 4vw;
   padding-left: 1vw;
@@ -552,6 +559,17 @@ body {
 
 .work-plus {
   display: block;
+}
+
+.marquee-block-scroll {
+  column-gap: 1dvw;
+  row-gap: 1dvw;
+  flex-flow: column;
+  width: 100%;
+  padding-top: 8dvw;
+  padding-bottom: 8dvw;
+  display: flex;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 991px) {
@@ -695,8 +713,8 @@ body {
   }
 
   .footer-links-container {
-    grid-column-gap: 1.2vw;
-    grid-row-gap: 1.2vw;
+    column-gap: 1.2vw;
+    row-gap: 1.2vw;
   }
 
   .landscape {
@@ -706,8 +724,8 @@ body {
   }
 
   .portfolio-container {
-    grid-column-gap: 2vw;
-    grid-row-gap: 2vw;
+    column-gap: 2vw;
+    row-gap: 2vw;
     justify-content: center;
     align-items: center;
   }
@@ -742,7 +760,6 @@ body {
     display: none;
   }
 
-
   .work-tags-title {
     white-space: wrap;
   }
@@ -751,6 +768,43 @@ body {
     color: #a0a0a0;
     text-transform: uppercase;
     font-size: 1.2dvw;
+  }
+
+  .marquee-block {
+    padding: 16dvw 2dvw;
+  }
+
+  .marquee-block-scroll {
+    column-gap: 2dvw;
+    row-gap: 2dvw;
+    padding: 30dvw 4dvw;
+  }
+
+  .studio-h4.expertise-title {
+    width: 70%;
+    font-size: 3dvw;
+  }
+
+  .expertise-image-container {
+    column-gap: 3dvw;
+    row-gap: 3dvw;
+    padding: 2dvw 2dvw 3dvw;
+  }
+  
+  .expertise-image-container:hover {
+    padding: 2dvw;
+  }
+
+  .expertise-container.blue {
+    background-color: #d5f2f6;
+  }
+
+  .expertise-container.magenta {
+    background-color: #fbefff;
+  }
+
+  .expertise-container.green {
+    background-color: #e5f4e1;
   }
 }
 
@@ -816,8 +870,8 @@ body {
   }
 
   .module-blocks {
-    grid-column-gap: 2vw;
-    grid-row-gap: 2vw;
+    column-gap: 2vw;
+    row-gap: 2vw;
     padding-top: 6vw;
     padding-left: 2vw;
     padding-right: 2vw;
@@ -834,8 +888,8 @@ body {
   }
 
   .portfolio-container {
-    grid-column-gap: 8vw;
-    grid-row-gap: 8vw;
+    column-gap: 8vw;
+    row-gap: 8vw;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
@@ -858,6 +912,23 @@ body {
   .work-description {
     font-size: 1.8dvw;
   }
+
+  .marquee-block-scroll {
+    padding-top: 20dvw;
+    padding-bottom: 20dvw;
+  }
+
+  .studio-h4.expertise-title {
+    font-size: 4dvw;
+  }
+
+  .expertise-image-container {
+    column-gap: 4dvw;
+    row-gap: 4dvw;
+    padding: 4dvw;
+  }
+
+ 
 }
 
 @media screen and (max-width: 479px) {
@@ -894,8 +965,8 @@ body {
   }
 
   .module-blocks {
-    grid-column-gap: 2dvw;
-    grid-row-gap: 2dvw;
+    column-gap: 2dvw;
+    row-gap: 2dvw;
     padding-top: 8dvw;
     padding-left: 4dvw;
     padding-right: 4dvw;
@@ -906,8 +977,8 @@ body {
   }
 
   .portfolio-container {
-    grid-column-gap: 6vw;
-    grid-row-gap: 6vw;
+    column-gap: 6vw;
+    row-gap: 6vw;
     margin-bottom: 4vw;
   }
 
@@ -925,5 +996,20 @@ body {
 
   .work-description {
     font-size: 2.4dvw;
+  }
+
+  .studio-h4.expertise-title {
+    width: 80%;
+    font-size: 5.6dvw;
+  }
+
+  .expertise-image-container {
+    column-gap: 5dvw;
+    row-gap: 5dvw;
+    padding: 4dvw 4dvw 5dvw;
+  }
+
+  .expertise-image-container:hover {
+    padding: 4dvw;
   }
 }

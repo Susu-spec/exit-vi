@@ -19,7 +19,7 @@ export default function Expertise() {
     });
 
     const gap = useBreakpointValue({
-        base: "2vw",
+        base: "4dvw",
         lg: "1vw"
     })
 
@@ -44,7 +44,7 @@ export default function Expertise() {
             display="flex"
             flexDir="column"
         >
-            <h4 className="studio-h4">
+            <h4 className="studio-h4 expertise-title">
                 Expertise & Capabilities
             </h4>
             <Splide
@@ -60,7 +60,7 @@ export default function Expertise() {
                     arrows: false,
                     pagination: pagination,
                     focus: 0,
-                    trimSpace: false,
+                    trimSpace: true,
                     breakpoints: {
                         1024: {
                             perPage: 2,
@@ -76,12 +76,19 @@ export default function Expertise() {
                         <Box className="expertise-image-container">
                             <Box borderRadius=".5rem">
                                 <HoverVideo
+                                    className="expertise"
                                     src="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642101/bhefcffg2eta2ry3k0f67vgol44t62chntda_hksyby.mp4"
                                     poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760040301/expertise-blue_xxgp3i.jpg"
                                 />
                             </Box>
                             <h3 className="studio-h4 expertise-h3">Technology</h3>
-                            <Flex width="100%">
+                            <Flex 
+                                width="100%" 
+                                flexFlow={{
+                                    base: "column",
+                                    lg: "row"
+                                }}
+                            >
                                 <Box
                                     columnGap=".3vw"
                                     rowGap=".3vw"
@@ -117,6 +124,7 @@ export default function Expertise() {
                         <Box className="expertise-image-container">
                             <Box borderRadius=".5rem">
                                 <HoverVideo
+                                    className="expertise"
                                     src="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642090/bheeicecyrhzyi3dd26lfivkab97k907q706_qzzyps.mp4"
                                     poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760040321/expertise-magenta_i3ftcq.jpg"
                                 />
@@ -158,6 +166,7 @@ export default function Expertise() {
                         <Box className="expertise-image-container">
                             <Box borderRadius=".5rem">
                                 <HoverVideo
+                                    className="expertise"
                                     src="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642090/bheeiceccip4dtalzn188e4w87papbecrhou_an9son.mp4"
                                     poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760040348/expertise-green_o0zxzj.jpg"
                                 />

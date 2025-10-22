@@ -3,7 +3,7 @@ import { useCursor } from "../../context/CursorProvider";
 import { useBreakpoint, useBreakpointValue } from "@chakra-ui/react";
 
 
-export default function HoverVideo({ src, poster }) {
+export default function HoverVideo({ src, poster, className }) {
   const videoRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const { setView, setDefault } = useCursor();
@@ -45,7 +45,7 @@ export default function HoverVideo({ src, poster }) {
         loop
         playsInline
         autoPlay={responsiveHovered}
-        className="inner-video"
+        className={`inner-video ${className}`}
         style={{
             objectFit: "cover",
             transition: "opacity .3s ease-in-out",
