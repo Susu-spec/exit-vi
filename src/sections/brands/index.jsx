@@ -5,7 +5,7 @@ import { brandsData } from "../../constants/data";
 import BrandSwiper from "./BrandSwiper";
 
 export default function Brands() {
-    const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
+    const [isSmallScreen] = useMediaQuery('(max-width: 991px)');
 
     const gap = useBreakpointValue({
         base: "2vw",
@@ -45,6 +45,7 @@ export default function Brands() {
                             disableOnInteraction: false,
                             pauseOnMouseEnter: false,
                         }}
+                        autoHeight={true}
                         speed={600}
                         slidesPerView={1}
                         spaceBetween={0}
