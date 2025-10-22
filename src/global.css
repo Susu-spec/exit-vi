@@ -486,6 +486,11 @@ body {
   overflow: hidden;
 }
 
+.module-slider {
+  padding-top: 8dvw;
+  padding-bottom: 8dvw;
+}
+
 @media screen and (max-width: 991px) {
   .navbar {
     padding-left: 2dvw;
@@ -528,6 +533,18 @@ body {
 
   .hero-slider-container {
     padding-left: 0;
+  }
+
+  .hero-slider {
+    cursor: auto;
+    padding-left: 2dvw;
+    padding-right: 10dvw;
+  }
+
+  
+  .module-slider {
+    padding-top: 14dvw;
+    padding-bottom: 14dvw;
   }
 
   .work-title {
@@ -639,6 +656,10 @@ body {
     padding-right: 2dvw;
   }
 
+  .hero-slider {
+    padding-right: 2dvw;
+  }
+
   .text-studio-indent {
     margin-left: 40%;
   }
@@ -695,5 +716,15 @@ body {
     width: 100%;
     padding: 3.2dvw 2.8dvw;
     font-size: 4dvw;
+  }
+
+  .hero-slider {
+    padding-left: 4dvw;
+    padding-right: 4dvw;
+  }
+
+  .module-slider {
+    padding-top: 20dvw;
+    padding-bottom: 20dvw;
   }
 }

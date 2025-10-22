@@ -18,7 +18,7 @@ export default function HeroSlider() {
     const cursor = useCursor();
     const { setDrag, setView, setDefault } = cursor;
     const fixedWidth = useBreakpointValue({
-        base: "calc(80% + 0vw)",
+        base: "calc(78% + 0vw)",
         lg: "calc(33.3333% - 0.666667vw)"
     })
 
@@ -28,8 +28,8 @@ export default function HeroSlider() {
     });
 
     const gap = useBreakpointValue({
-        base: "3vw",
-        lg: "1vw"
+        base: "2dvw",
+        lg: "1dvw"
     })
 
     const perPage = useBreakpointValue({
@@ -38,12 +38,8 @@ export default function HeroSlider() {
     })
 
     return (
-        <Grid 
-            paddingY={{
-                base: "14vw",
-                lg: "8vw"
-            }} 
-            className="hero-slider-container"
+        <Grid
+            className="module-slider hero-slider-container"
             columnGap="8vw" 
             rowGap="8vw" 
             flexFlow="column"
@@ -51,7 +47,17 @@ export default function HeroSlider() {
             onMouseDown={setDrag}
             onMouseLeave={setDefault}
         >
-                <Box overflow="hidden" width="100%" height="100%" position="relative" paddingLeft="1vw">
+                <Box 
+                    overflow="hidden" 
+                    width="100%" 
+                    height="100%" 
+                    position="relative" 
+                    padding={{
+                        base: "0 4dvw",
+                        md: "0 2dvw 0 10dvw",
+                        lg: "0 1dvw 0 0"
+                    }}
+                >
                     <Splide options={{
                         type: "slide",
                         perPage: perPage,
@@ -63,14 +69,14 @@ export default function HeroSlider() {
                         pagination: pagination,
                         drag: true,
                         fixedWidth: fixedWidth,
+                        trimSpace: true
                     }}
                     aria-label="Hero Video Slider"
                     className="hero-slider-container"
                     >
                         {videoUrls.map((url, index) => (
-                            <SplideSlide>
+                            <SplideSlide key={index}>
                                 <HeroCard
-                                    key={index}
                                     videoUrl={url}
                                 />
                             </SplideSlide>
