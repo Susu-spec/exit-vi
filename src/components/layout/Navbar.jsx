@@ -9,6 +9,7 @@ export default function Navbar() {
             className="navbar"
             templateColumns="repeat(4, 1fr)"
             templateRows="auto"
+            position="absolute"
         >
             <Flex 
                 alignItems="flex-start"
@@ -60,10 +61,7 @@ export default function Navbar() {
                 flexDirection="column"
             >
                 <Box
-                    columnGap={{
-                        base: "1.6vw",
-                        lg: "1vw"
-                    }}
+                    className="nav-inner"
                     display="flex"
                 >
                     <Link href="#" className="nav-link">
