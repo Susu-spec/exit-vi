@@ -716,6 +716,7 @@ body {
   .text.description-info-awards {
     font-size: 1.3dvw;
     line-height: 1.5dvw;
+    width: 70%;
   }
 
   .brands-block-container {
@@ -890,6 +891,10 @@ body {
     align-items: flex-end;
     justify-content: flex-start;
     width: 6%;
+  }
+
+  .infos-awards {
+    width: 22%;
   }
 }
 
@@ -1136,6 +1141,10 @@ body {
     width: 100%;
     padding-bottom: 3.5dvw;
     font-size: 6dvw;
+  }
+
+  .infos-awards {
+    width: 100%;
   }
 
   .label-info-awards {

@@ -95,16 +95,13 @@ export default function Awards() {
                                         columnGap=".5vw"
                                         rowGap=".5vw"
                                         flexFlow="column"
-                                        width={{
-                                            base: "100%",
-                                            md: "22%",
-                                        }}
                                         fontSize={{
                                             base: "4.4dvw",
                                             md: "1.9dvw",
                                             lg: ".9dvw"
                                         }}
                                         lineHeight={1}
+                                        className="infos-awards"
                                     >
                                         <p className="text label-info-awards">Project</p>
                                         <p className="text description-info-awards">{award.project}</p>
@@ -113,16 +110,13 @@ export default function Awards() {
                                         columnGap=".5vw"
                                         rowGap=".5vw"
                                         flexFlow="column"
-                                        width={{
-                                            base: "100%",
-                                            md: "22%"
-                                        }}
                                         fontSize={{
                                             base: "4.4dvw",
                                             md: "1.9dvw",
                                             lg: ".9dvw"
                                         }}
                                         lineHeight={1}
+                                        className="infos-awards"
                                     >
                                         <p className="text label-info-awards">Category</p>
                                         <p className="text description-info-awards">
