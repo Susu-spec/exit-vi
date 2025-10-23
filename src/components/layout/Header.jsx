@@ -6,6 +6,7 @@ export default function Header() {
             <div className="full-video w-embed">
                 <Box id="sizzle-wrapper" aspectRatio={"2/1"} >
                     <video
+                        preload="metadata"
                         width="100%"
                         height="100%"
                         loading="lazy"

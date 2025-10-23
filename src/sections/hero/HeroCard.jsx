@@ -21,6 +21,7 @@ export default function HeroCard({ videoUrl }) {
                 pos="relative"
             >
                 <video
+                    preload="metadata"
                     width="100%"
                     height="100%"
                     loading="lazy"

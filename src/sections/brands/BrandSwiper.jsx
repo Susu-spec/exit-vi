@@ -28,6 +28,7 @@ export default function BrandSwiper({ brand }) {
         >
             {!isSmallScreen &&
                 <img
+                    decoding="async"
                     src={brand.logoDefault}
                     alt={brand.name}
                     className="single-brand-logo active"
@@ -36,9 +37,11 @@ export default function BrandSwiper({ brand }) {
                         maxWidth: '80%',
                         objectFit: 'contain'
                     }}
+                    loading="lazy"
                 />}
 
                 <img
+                    decoding="async"
                     src={brand.logoHover}
                     alt={brand.name}
                     className="single-brand-logo hover"
@@ -49,6 +52,7 @@ export default function BrandSwiper({ brand }) {
                         objectFit: 'contain',
                         zIndex: 2
                     }}
+                    loading="lazy"
 
                 />
 

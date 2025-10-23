@@ -25,6 +25,7 @@ export default function Footer() {
             >
                 <Box className="w-node_01">
                     <img
+                        decoding="async"
                         src="https://cdn.prod.website-files.com/6403ade6e2cfd9c42fe587b0/673e7d618507b496c9abfece_Studio-Logo.svg"
                         loading="lazy"
                         alt="Form+Fun Studio Logo"

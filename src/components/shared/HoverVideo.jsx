@@ -38,6 +38,7 @@ export default function HoverVideo({ src, poster, className }) {
     className="relative overflow-hidden"
     >
       <video
+        preload="metadata"
         ref={videoRef}
         src={src}
         poster={poster}
