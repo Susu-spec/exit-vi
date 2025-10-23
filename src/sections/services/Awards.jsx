@@ -44,7 +44,7 @@ export default function Awards() {
                 }}>
                     An Award 
                     <br />
-                    Winning 
+                    Winning&nbsp; 
                     <Box
                         display={{
                             base: "block",

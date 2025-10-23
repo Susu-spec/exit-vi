@@ -606,6 +606,10 @@ body {
   width: 6%;
 }
 
+.infos-awards {
+  width: 22%;
+}
+
 
 
 @media screen and (max-width: 991px) {
