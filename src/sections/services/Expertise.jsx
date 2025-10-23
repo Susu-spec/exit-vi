@@ -77,8 +77,8 @@ export default function Expertise() {
                             <Box borderRadius=".5rem">
                                 <HoverVideo
                                     className="expertise"
-                                    src="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642101/bhefcffg2eta2ry3k0f67vgol44t62chntda_hksyby.mp4"
-                                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760040301/expertise-blue_xxgp3i.jpg"
+                                    src="https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759642101/bhefcffg2eta2ry3k0f67vgol44t62chntda_hksyby.mp4"
+                                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/f_auto,q_auto/v1760040301/expertise-blue_xxgp3i.jpg"
                                 />
                             </Box>
                             <h3 className="studio-h4 expertise-h3">Technology</h3>
@@ -125,8 +125,8 @@ export default function Expertise() {
                             <Box borderRadius=".5rem">
                                 <HoverVideo
                                     className="expertise"
-                                    src="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642090/bheeicecyrhzyi3dd26lfivkab97k907q706_qzzyps.mp4"
-                                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760040321/expertise-magenta_i3ftcq.jpg"
+                                    src="https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759642090/bheeicecyrhzyi3dd26lfivkab97k907q706_qzzyps.mp4"
+                                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/f_auto,q_auto/v1760040321/expertise-magenta_i3ftcq.jpg"
                                 />
                             </Box>
                             <h3 className="studio-h4 expertise-h3">Design</h3>
@@ -173,8 +173,8 @@ export default function Expertise() {
                             <Box borderRadius=".5rem">
                                 <HoverVideo
                                     className="expertise"
-                                    src="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642090/bheeiceccip4dtalzn188e4w87papbecrhou_an9son.mp4"
-                                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760040348/expertise-green_o0zxzj.jpg"
+                                    src="https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759642090/bheeiceccip4dtalzn188e4w87papbecrhou_an9son.mp4"
+                                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/f_auto,q_auto/v1760040348/expertise-green_o0zxzj.jpg"
                                 />
                             </Box>
                             <h3 className="studio-h4 expertise-h3">Motion & CGI</h3>

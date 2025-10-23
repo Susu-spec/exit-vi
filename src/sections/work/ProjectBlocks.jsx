@@ -25,15 +25,15 @@ export default function ProjectBlocks() {
             >
                 <PortfolioBlock
                     tags={["Oreo X Pacman", "AR Experience"]}
-                    videoSrc="http://res.cloudinary.com/dm7vlpslq/video/upload/v1759642096/bheeicdi21w0hkxyqiby6vxovghp64qh2wan_qwmt7l.mp4"
-                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014047/oreo-thumbnail_ahdxpv.jpg"
+                    videoSrc="http://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759642096/bheeicdi21w0hkxyqiby6vxovghp64qh2wan_qwmt7l.mp4"
+                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/f_auto,q_auto/v1760014047/oreo-thumbnail_ahdxpv.jpg"
                     orientation="landscape"
                     textColor="text-white"
                 />
                 <PortfolioBlock
                     tags={["Doordash Summer of Dashpass", "Campaign"]}
-                    videoSrc="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642676/YThAIwoXKB_576p_1744824072_ccmg6f.mp4"
-                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014077/icecream-thumbnail_zytvtb.jpg"
+                    videoSrc="https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759642676/YThAIwoXKB_576p_1744824072_ccmg6f.mp4"
+                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/f_auto,q_auto/v1760014077/icecream-thumbnail_zytvtb.jpg"
                     orientation="portrait"
                     textColor="text-white"
                 />
@@ -45,15 +45,15 @@ export default function ProjectBlocks() {
                     tags={["Widlet"]} 
                     textColor="text-black"
                     orientation="portrait"
-                    videoSrc="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642080/bheeicea8cwvkf21vcnbg8jhx3wo0wyb42im_q9yvuz.mp4"
-                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014816/coin-thumbnail-new_o9njeo.jpg"
+                    videoSrc="https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759642080/bheeicea8cwvkf21vcnbg8jhx3wo0wyb42im_q9yvuz.mp4"
+                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/f_auto,q_auto/v1760014816/coin-thumbnail-new_o9njeo.jpg"
                 />
                 <PortfolioBlock
                     tags={["Powerade Mindzone", "VR Experience"]} 
                     textColor="text-white"
                     orientation="landscape"
-                    videoSrc="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642089/bheeicea3wowr2ifyqckn5737cnu42mewpr1_a8wqzo.mp4"
-                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/v1760014101/goggles_dzwjen.jpg"
+                    videoSrc="https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759642089/bheeicea3wowr2ifyqckn5737cnu42mewpr1_a8wqzo.mp4"
+                    poster="https://res.cloudinary.com/dgafp4dx4/image/upload/f_auto,q_auto/v1760014101/goggles_dzwjen.jpg"
                 />
             </Flex>
         </Grid>

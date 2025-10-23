@@ -9,7 +9,7 @@ export default function Header() {
                         width="100%"
                         height="100%"
                         loading="lazy"
-                        src="https://res.cloudinary.com/dm7vlpslq/video/upload/v1759604931/formandfunsizzle_k1h5n4.mp4"
+                        src="https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759604931/formandfunsizzle_k1h5n4.mp4"
                         loop={true}
                         playsInline
                         autoPlay={true}

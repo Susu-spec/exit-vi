@@ -5,12 +5,12 @@ import HeroCard from "../../sections/hero/HeroCard";
 import { useCursor } from "../../context/CursorProvider";
 
 const videoUrls = [
-    "https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642111/bheeicedy3ihyzyn31iuum3m4cldsk8dqlxe_wh4lip.mp4",
-    "https://res.cloudinary.com/dm7vlpslq/video/upload/v1759642078/bheeicedz8a5tcbo6sr84repcz7zjtyfocua_zaf61j.mp4",
-    "https://res.cloudinary.com/dm7vlpslq/video/upload/v1759639587/ILLpcsHOAB_576p_1744824343_vu4fee.mp4",
-    "https://res.cloudinary.com/dgafp4dx4/video/upload/v1760203506/bheeiced5jnufmkv27k6gsr8vdhpjn2romax_dicsna.mp4",
-    "https://res.cloudinary.com/dm7vlpslq/video/upload/v1759639587/GWazvydWJs_576p_1744824344_wyftge.mp4",
-    "https://res.cloudinary.com/dm7vlpslq/video/upload/v1759639607/LCVDnqXAon_576p_1751149542_a65jqv.mp4"
+    "https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759642111/bheeicedy3ihyzyn31iuum3m4cldsk8dqlxe_wh4lip.mp4",
+    "https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759642078/bheeicedz8a5tcbo6sr84repcz7zjtyfocua_zaf61j.mp4",
+    "https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759639587/ILLpcsHOAB_576p_1744824343_vu4fee.mp4",
+    "https://res.cloudinary.com/dgafp4dx4/video/upload/f_auto,q_auto/v1760203506/bheeiced5jnufmkv27k6gsr8vdhpjn2romax_dicsna.mp4",
+    "https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759639587/GWazvydWJs_576p_1744824344_wyftge.mp4",
+    "https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759639607/LCVDnqXAon_576p_1751149542_a65jqv.mp4"
 ]
 
 
