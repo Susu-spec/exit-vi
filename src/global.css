@@ -389,8 +389,8 @@ body {
   border-radius: 8px;
   align-items: flex-start;
   width: 100%;
-  height: fit-content;
   overflow: hidden;
+  height: 15dvw
 }
 
 .single-brand-container {
@@ -604,10 +604,6 @@ body {
 .award-year {
   text-align: right;
   width: 6%;
-}
-
-.swiper-wrapper {
-  height: fit-content
 }
 
 
@@ -869,7 +865,8 @@ body {
   }
 
   .single-brand-container.spotify {
-    background-color: #1ed760;
+    /* background-color: #1ed760; */
+    background-color: #1db954;
   }
 
   .single-brand-container.oreo {
@@ -881,7 +878,8 @@ body {
   }
 
   .single-brand-container.powerade {
-    background-color: #00acec;
+    /* background-color: #00acec; */
+     background-color: #007bff;
   }
 
   .single-brand-container.doordash {
@@ -1028,6 +1026,10 @@ body {
     font-size: 1.4dvw;
     line-height: 1.7dvw;
   }
+
+  .brands-block-container {
+    height: 21.875rem;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1153,7 +1155,7 @@ body {
   }
 
   .brands-block-container {
-    height: "16.25rem"
+    height: 21.875rem
   }
 
   .footer-links {
@@ -1161,3 +1163,5 @@ body {
   }
   
 }
+
+

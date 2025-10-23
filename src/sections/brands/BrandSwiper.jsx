@@ -5,10 +5,10 @@ export default function BrandSwiper({ brand }) {
     const [isSmallScreen] = useMediaQuery('(max-width: 991px)');
     const [isHovered, setIsHovered] = useState(false);
     const height = useBreakpointValue({
-        base: "100%",
-        sm: "31.875rem",
+        base: "21.875rem",
+        sm: "21.875rem",
         md: "31.875rem",
-        lg: "15rem"
+        lg: "15vw"
     })
 
     const background = brand?.name === "Saatchi & Saatchi" ? 
@@ -19,7 +19,7 @@ export default function BrandSwiper({ brand }) {
         <Box
             className={`single-brand-container ${background}`}
             position="relative"
-            minHeight={height}
+            height={height}
             display="flex"
             alignItems="center"
             justifyContent="center"
