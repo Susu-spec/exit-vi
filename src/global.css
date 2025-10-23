@@ -896,6 +896,15 @@ body {
   .infos-awards {
     width: 22%;
   }
+
+  .studio-h4.expertise-h3 {
+    font-size: 5dvw;
+  }
+
+  .studio-h4.expertise-p {
+    opacity: 100;
+    font-size: 1.8dvw;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1035,6 +1044,11 @@ body {
   .brands-block-container {
     height: 21.875rem;
   }
+
+  .studio-h4.expertise-h3 {
+    font-size: 8dvw;
+    line-height: 110%;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1171,6 +1185,9 @@ body {
     font-size: 4dvw;
   }
   
+  .studio-h4.expertise-p {
+    font-size: 3.4dvw;
+  }
 }
 
 

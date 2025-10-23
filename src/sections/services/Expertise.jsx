@@ -130,7 +130,13 @@ export default function Expertise() {
                                 />
                             </Box>
                             <h3 className="studio-h4 expertise-h3">Design</h3>
-                            <Flex width="100%">
+                            <Flex 
+                                width="100%"
+                                flexFlow={{
+                                    base: "column",
+                                    lg: "row"
+                                }}
+                            >
                                 <Box
                                     columnGap=".3vw"
                                     rowGap=".3vw"
@@ -172,7 +178,13 @@ export default function Expertise() {
                                 />
                             </Box>
                             <h3 className="studio-h4 expertise-h3">Motion & CGI</h3>
-                            <Flex width="100%">
+                            <Flex 
+                                width="100%"
+                                flexFlow={{
+                                    base: "column",
+                                    lg: "row"
+                                }}
+                            >
                                 <Box
                                     columnGap=".3vw"
                                     rowGap=".3vw"
