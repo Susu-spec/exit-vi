@@ -10,7 +10,6 @@ export default function Typewriter({
     stagger = 0.12,
     fontSize = "2vw",
     once = true,
-    // gradient = "linear-gradient(90deg, #9ca3af 0%, #000 100%)",
     initialColor = "#9ca3af",
     finalColor = "#000",
     showCursor = false
@@ -24,27 +23,6 @@ export default function Typewriter({
             }
         }
     }
-
-    // const container = {
-    //     hidden: {},
-    //     visible: {
-    //         transition: {
-    //             staggerChildren: stagger
-    //         }
-    //     }
-    // }
-
-    //  const letter = {
-    //     hidden: { backgroundSize: "0% 100%", opacity: 0.6 },
-    //     visible: {
-    //     backgroundSize: "100% 100%",
-    //     opacity: 1,
-    //     transition: {
-    //         duration,
-    //         ease: "easeInOut",
-    //     },
-    //     },
-    // };
 
     const letter = {
         hidden: { color: initialColor, opacity: 0 },
@@ -78,14 +56,8 @@ export default function Typewriter({
                     key={i}
                     variants={letter}
                     style={{
-                        fontFamily: "'Aeonik', sans-serif"
-                        // backgroundImage: gradient,
-                        // backgroundClip: "text",
-                        // WebkitBackgroundClip: "text",
-                        // color: "transparent",
-                        // backgroundRepeat: "no-repeat",
-                        // backgroundPosition: "left",
-                        // display: "inline-block",
+                        fontFamily: "'Aeonik', sans-serif",
+                        pointerEvents: "none"
                     }}
                 >
                     {char === " " ? "\u00A0" : char}

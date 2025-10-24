@@ -19,7 +19,7 @@ export default function Hero() {
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start end", "end start"]
+        offset: ["start end", "start 20%"]
     });
 
     const progress = useSpring(isInView ? scrollYProgress : 0);
@@ -58,7 +58,7 @@ export default function Hero() {
                                 style={{
                                     color: `rgb(29, 29, 29)`
                                 }}
-                                className="inline">
+                                >
                                     {words[0]}&nbsp;
                             </motion.span>
                         </Box>

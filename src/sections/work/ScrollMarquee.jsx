@@ -1,24 +1,40 @@
 import { Box, Flex } from "@chakra-ui/react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useAnimation, useInView, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const MotionBox = motion(Box);
 
 export default function ScrollMarquee() {
     const containerRef = useRef(null);
+    const motionContainerRef = useRef(null);
+
     const direction = 'left';
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ['start end', 'end start']
-    })
+    });
 
     const x = useTransform(
         scrollYProgress,
         [0, 1],
         direction === 'left' ? ['0%', '-50%'] : ['-50%', '0%']
-    )
+    );
 
     const items = Array.from({ length: 15 });
+
+    const isInView = useInView(motionContainerRef);
+    const controls = useAnimation();
+
+    useEffect(() => {
+        if (isInView) {
+            controls.start({
+                x
+            })
+        } else {
+            controls.stop()
+        }
+    }, [isInView, controls]);
+
     return (
         <Box
             className="marquee-block-scroll"
@@ -65,10 +81,6 @@ export default function ScrollMarquee() {
                         >
                             Creative<br />Technology<br />Studio
                         </Box>
-                        {/* <img
-                            src="https://cdn.prod.website-files.com/6403ade6e2cfd9c42fe587b0/672e582f6747c6055b813299_FormFun.svg"
-                            loading="lazy"
-                            className="logo-marquee" /> */}
                         <Box
                             className="logo-marquee text"
                             fontSize={{

@@ -3,6 +3,7 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { brandsData } from "../../constants/data";
 import BrandSwiper from "./BrandSwiper";
+import { useEffect, useRef } from "react";
 
 export default function Brands() {
     const [isSmallScreen] = useMediaQuery('(max-width: 991px)');
@@ -10,7 +11,31 @@ export default function Brands() {
     const gap = useBreakpointValue({
         base: "2vw",
         lg: "1vw"
-    })
+    });
+
+    const swiperRef = useRef(null);
+
+    useEffect(() => {
+        const el = swiperRef.current?.el;
+        if (!el) return;
+
+        const observer = new IntersectionObserver(
+        ([entry]) => {
+            const swiper = swiperRef.current?.swiper;
+            if (!swiper?.autoplay) return;
+
+            if (entry.isIntersecting) {
+            swiper.autoplay.start();
+            } else {
+            swiper.autoplay.stop();
+            }
+        },
+        { threshold: 0.2 }
+        );
+
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <Flex
@@ -37,6 +62,7 @@ export default function Brands() {
                 className="hero brand-h3">Trusted by the world's leading brands</Text>
                 {isSmallScreen ?
                     <Swiper
+                        ref={swiperRef}
                         modules={[Autoplay]}
                         direction="vertical"
                         loop={true}
@@ -71,6 +97,7 @@ export default function Brands() {
                         {brandsData.map((column, index) => (
                             <Swiper
                                 key={index}
+                                ref={swiperRef}
                                 modules={[Autoplay]}
                                 direction="vertical"
                                 loop={true}
