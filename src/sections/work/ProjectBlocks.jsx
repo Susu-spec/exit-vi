@@ -25,7 +25,7 @@ export default function ProjectBlocks() {
             >
                 <PortfolioBlock
                     tags={["Oreo X Pacman", "AR Experience"]}
-                    videoSrc="http://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759642096/bheeicdi21w0hkxyqiby6vxovghp64qh2wan_qwmt7l.mp4"
+                    videoSrc="https://res.cloudinary.com/dm7vlpslq/video/upload/f_auto,q_auto/v1759642096/bheeicdi21w0hkxyqiby6vxovghp64qh2wan_qwmt7l.mp4"
                     poster="https://res.cloudinary.com/dgafp4dx4/image/upload/f_auto,q_auto/v1760014047/oreo-thumbnail_ahdxpv.jpg"
                     orientation="landscape"
                     textColor="text-white"
