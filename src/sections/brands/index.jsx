@@ -51,7 +51,6 @@ export default function Brands() {
                         spaceBetween={0}
                         allowTouchMove={true}
                         className="brands-block-container"
-                        virtual
                         lazyPreloadPrevNext={true}
                     >
                         {brandsData.flat().map((brand, index) => (
@@ -85,7 +84,6 @@ export default function Brands() {
                                 spaceBetween={0}
                                 allowTouchMove={true}
                                 className="brands-block-container"
-                                virtual
                                 lazyPreloadPrevNext={true}
                             >
                                 {column.map((brand, index) => (
