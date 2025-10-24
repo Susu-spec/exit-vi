@@ -37,7 +37,10 @@ html {
   scroll-behavior: smooth;
   background-attachment: scroll;
   overflow: hidden;
-  contain: layout paint;
+}
+
+html.lenis {
+  height: auto;
 }
 
 
