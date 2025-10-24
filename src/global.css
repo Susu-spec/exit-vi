@@ -36,13 +36,11 @@
 html {
   scroll-behavior: smooth;
   background-attachment: scroll;
-  overflow: hidden;
 }
 
 html.lenis {
   height: auto;
 }
-
 
 body {
   color: #333;

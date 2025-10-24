@@ -9,8 +9,10 @@ import CustomCursor from "./components/shared/CustomCursor"
 import Work from "./sections/work"
 import Services from "./sections/services"
 import Brands from "./sections/brands"
+import { useMediaQuery } from "@chakra-ui/react"
 
 function App() {
+ const [isSmallScreen] = useMediaQuery('(max-width: 991px)');
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -29,7 +31,11 @@ function App() {
 
   return (
     <CursorProvider>
-      <CustomCursor />
+      {!isSmallScreen &&
+        <div style={{ position: "relative", zIndex: 9999 }}>
+          <CustomCursor />
+        </div>
+      }
       <Layout>
         <ExitViWrapper />
         <Header />
