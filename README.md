@@ -72,7 +72,3 @@ Check out the live app here: [exit-vi.vercel.app](https://exit-vi.vercel.app/)
 ## Credits
 
 Design inspiration from [FormandFun](https://formandfun.co/)
-
----
-
-Made with ❤️ using React, Chakra UI, and Framer Motion
